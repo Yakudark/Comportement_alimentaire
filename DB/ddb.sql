@@ -11,15 +11,6 @@ CREATE TABLE users(
     PRIMARY KEY (id)
 );
 
-CREATE TABLE scales(
-    id INT NOT NULL AUTO_INCREMENT,
-    date_of_scale VARCHAR(30) NOT NULL,
-    id_user INT NOT NULL,
-    kcal INT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
-);
-
 CREATE TABLE food(
     id INT NOT NULL AUTO_INCREMENT,
     name_food VARCHAR(50) NOT NULL,
@@ -28,7 +19,7 @@ CREATE TABLE food(
     PRIMARY KEY (id)
 );
 
-CREATE TABLE eaten(
+CREATE TABLE eaten_date(
     id_user INT NOT NULL,
     id_food INT NOT NULL,
     date_of_eaten VARCHAR(30) NOT NULL,
