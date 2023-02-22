@@ -1,15 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('Controllers\controllers.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-  
-</body>
-
-</html>
+try {
+    if (isset($_GET['action'])) {
+        if ($_GET['action'] == 'createClient') {
+            // createClient();
+        } 
+        // else
+        // if ($_GET['action'] == 'createOneClient') {
+        //     createOneClient();
+        // }
+        // else 
+        // if ($_GET['action'] == 'updateClient') {
+        //     updateClientDisplay();
+        // }
+        // else
+        // if ($_GET['action'] == 'updateOneClient') {
+        //     updateOneClient();
+        // }
+        // else 
+        // if ($_GET['action'] == 'deleteClient') {
+        //     deleteAClient();
+        // } 
+        else
+            throw new Exception("Action non valide");
+    } else {
+        accueil();  // action par défaut
+    }
+} catch (Exception $e) {
+    erreur($e->getMessage());
+}
