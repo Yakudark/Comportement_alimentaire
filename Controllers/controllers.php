@@ -16,11 +16,15 @@ function signInUser()
 
 function logInUser()
 {
-    if(isset($_POST)){
+    if (isset($_POST)) {
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
 
-        $result = logIn($email, $pwd);
+        $user = logIn($email, $pwd);
+        if ($user) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_email'] = $user['email'];
+        }
     }
 }
 
