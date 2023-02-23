@@ -1,4 +1,4 @@
-<?php $titre = "Modifier profil";
+<?php $titre = "Inscription";
 ob_start();
 ?>
 //-------Mettre ici le contenu-----------------
