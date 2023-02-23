@@ -1,7 +1,13 @@
 <?php $titre = "Profil";
 ob_start();
 ?>
-<h1>Coucou</h1>
+//-------Mettre ici le contenu-----------------
+
+
+
+
+
+//-------Mettre ici le contenu-----------------
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require 'gabarit.php'; ?>
