@@ -3,21 +3,16 @@ include('Controllers\controllers.php');
 
 try {
     if (isset($_GET['action'])) {
-        if ($_GET['action'] == 'createClient') {
-            // createClient();
-        } 
-        // else
-        // if ($_GET['action'] == 'createOneClient') {
-        //     createOneClient();
-        // }
-        // else 
-        // if ($_GET['action'] == 'updateClient') {
-        //     updateClientDisplay();
-        // }
-        // else
-        // if ($_GET['action'] == 'updateOneClient') {
-        //     updateOneClient();
-        // }
+        if ($_GET['action'] == 'signIn') {
+            signInUser();
+        }
+        else 
+        if ($_GET['action'] == 'logIn') {
+            logInUser();
+        }
+        else if ($_GET['action'] == 'addUserInfo') {
+            addUserInfo();
+        }
         // else 
         // if ($_GET['action'] == 'deleteClient') {
         //     deleteAClient();
