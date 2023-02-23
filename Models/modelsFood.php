@@ -3,7 +3,7 @@
 function getBDD()
 {
     try {
-        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', 'root');
+        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', '');
         return $bdd;
     } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());
