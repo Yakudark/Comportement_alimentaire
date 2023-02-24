@@ -1,7 +1,7 @@
 <?php
 require('././Models/modelsUser.php');
-require('././Models/modelsFood.php');
-require('././Models/modelsDate.php');
+// require('././Models/modelsFood.php');
+// require('././Models/modelsDate.php');
 
 // Affiche la liste de tous les employés de l'entreprise
 function accueil()
@@ -12,15 +12,20 @@ function accueil()
 
 function signInUser()
 {
+    echo "hello";
 }
 
 function logInUser()
 {
-    if(isset($_POST)){
+    if (isset($_POST)) {
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
 
-        $result = logIn($email, $pwd);
+        $user = logIn($email, $pwd);
+        if ($user) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_email'] = $user['email'];
+        }
     }
 }
 

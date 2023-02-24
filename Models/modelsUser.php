@@ -1,6 +1,6 @@
 <?php
 
-function getBDD()
+function getBdd()
 {
     try {
         $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', '');
@@ -22,7 +22,7 @@ function isEmailUnique($email)
 function signIn($email, $password)
 {
     $bdd = getBdd();
-    if (isEmailUnique($email)) {
+    if (isEmailUnique($email))  {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $query = $bdd->prepare("INSERT INTO users (email, pwd) VALUES (:email, :pwd)");
         $query->bindParam(':email', $email);
@@ -93,3 +93,6 @@ function deleteUser($id)
     $query->bindParam(':id', $id);
     $query->execute();
 }
+
+
+

@@ -5,12 +5,10 @@ try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'signIn') {
             signInUser();
-        }
-        else 
+        } else 
         if ($_GET['action'] == 'logIn') {
             logInUser();
-        }
-        else if ($_GET['action'] == 'addUserInfo') {
+        } else if ($_GET['action'] == 'addUserInfo') {
             addUserInfo();
         }
         // else 
