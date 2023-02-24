@@ -32,8 +32,8 @@
                 <li>Articles</li>
                 <li>Recettes</li>
             </ul>
-            <a href=<?= ".\index.php?action=logIn" ?>><button>Se connecter</button></a>
-            <a href=<?= ".\index.php?action=signIn" ?>><button>S’inscrire</button></a>
+            <a href=".\index.php?action=logIn"><button>Se connecter</button></a>
+            <a href=".\index.php?action=signIn"><button>S’inscrire</button></a>
         </nav>
     </header>
     <div id="contenu">
