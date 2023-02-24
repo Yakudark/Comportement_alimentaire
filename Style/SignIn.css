@@ -1,0 +1,52 @@
+body{
+    background-color: darkgray !important;
+}
+.inscription{
+    width: 45%;
+    padding: 5%;
+    margin: auto;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 5px #a6a6a6;
+}
+.btn-inscription, .login-btn{
+    border-radius: 20px;
+    background-color: whitesmoke;
+    border-color: green;
+    color: #3FC068;
+}
+.btn-inscription:hover, .login-btn:hover{
+    scale: 1.1;
+    color: green;
+    border-color: #3FC068;
+}
+.icon, .title{
+    color: #3FC068;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8%;
+}
+.title{
+    padding-bottom: 5%;
+    margin: auto;
+}
+.row{
+    display: flex !important;
+    flex-direction: row !important;
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+}
+.input-area{
+    border: none;
+    border-bottom: 1px solid green;
+}
+#faUser{
+    width: 15%;
+}
+#template{
+    display: none;
+}
