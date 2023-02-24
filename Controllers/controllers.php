@@ -1,5 +1,7 @@
 <?php
 require('././Models/modelsUser.php');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 // require('././Models/modelsFood.php');
 // require('././Models/modelsDate.php');
 
@@ -17,13 +19,16 @@ function signInUser()
 
 function validSignIn()
 {
-    if (isset($_POST)){
+    if (isset($_POST)) {
         $firstname = $_POST['prenom'];
         $lastname = $_POST['nom'];
         $email = $_POST['email'];
         $pwd = $_POST['motdepasse'];
 
-        signIn($firstname, $lastname, $email, $pwd);
+        $result = signIn($firstname, $lastname, $email, $pwd);
+        if ($result) {
+            accueil();
+        }
     }
 }
 
@@ -40,8 +45,17 @@ function validLogIn()
 
         $user = logIn($email, $pwd);
         if ($user) {
+            session_set_cookie_params([
+                'SameSite' => 'None',
+                'secure' => true
+            ]);
+            session_start();
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
+
+            accueil();
+        } else {
+            echo "email ou mpd invalide";
         }
     }
 }

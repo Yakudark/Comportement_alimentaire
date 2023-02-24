@@ -11,6 +11,8 @@ try {
             logInUser();
         } else if ($_GET['action'] == 'addUserInfo') {
             addUserInfo();
+        } else if ($_GET['action'] == 'validLogIn') {
+            validLogIn();
         }
 
         // else 
