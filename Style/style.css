@@ -5,7 +5,7 @@
 
 /* ----------------------------HEADER------------------------------ */
 .navbar {
-    background-image: url(../Asset/fondHeader.png);
+    background-image: url(/Asset/fondHeader.png);
     background-position: 75% 25%;
     display: flex;
     align-items: center;
@@ -196,11 +196,10 @@ footer p, footer strong, footer b, footer {
 
 .footer-top {
     background-image: url(/Asset/fondHeader.png);
-    
+ 
     background-size: cover;
     background-position: center;
     padding: 0 0 20px;
-    font-family: rubik;
   padding-top:30px;
   
 }

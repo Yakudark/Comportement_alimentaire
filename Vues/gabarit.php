@@ -28,7 +28,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="../Asset/logo9ter.png" alt="Logo Scale In Diet">
+                <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
             </div>
             <nav>
 
