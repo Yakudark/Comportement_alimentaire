@@ -15,11 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" src="index.js"></script>
     <link rel="stylesheet" href="./Style/style.css">
     <link rel="stylesheet" href="./Style/SignIn.css">
     <title><?= $titre ?></title>
@@ -91,13 +88,11 @@
                                             :<br> La maison de la recherche -11 boulevard du faubourg Honoré- 75000 -
                                             Paris
                                         </div>
-                                        <div class="gem-contacts-item gem-contacts-phone"><i class="bi bi-telephone"
-                                                aria-hidden="true"></i> Téléphone: <a href="#">0175859685</a></div>
+                                        <div class="gem-contacts-item gem-contacts-phone"><i class="bi bi-telephone" aria-hidden="true"></i> Téléphone: <a href="#">0175859685</a></div>
 
                                         <div class="gem-contacts-item gem-contacts-address mt-2">Soutien :<br> Service
                                             du Soutien - 12 rue du compagnon - 83100 - Toulon</div>
-                                        <div class="gem-contacts-item gem-contacts-phone"><i class="bi bi-telephone"
-                                                aria-hidden="true"></i> Téléphone: <a href="#">0494258596</a></div>
+                                        <div class="gem-contacts-item gem-contacts-phone"><i class="bi bi-telephone" aria-hidden="true"></i> Téléphone: <a href="#">0494258596</a></div>
 
                                     </div>
                                 </div>
@@ -147,26 +142,11 @@
                                                     <form method="post" class="wpcf7-form" novalidate="novalidate">
 
                                                         <div class="contact-form-footer">
-                                                            <p><span class="wpcf7-form-control-wrap your-first-name"><input
-                                                                        type="text" name="your-first-name" value=""
-                                                                        size="40" class="wpcf7-form-control wpcf7-text"
-                                                                        aria-invalid="false"
-                                                                        placeholder="Votre nom"></span></p>
-                                                            <p><span class="wpcf7-form-control-wrap your-email_1"><input
-                                                                        type="email" name="your-email_1" value=""
-                                                                        size="40"
-                                                                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email"
-                                                                        aria-invalid="false"
-                                                                        placeholder="Votre email"></span></p>
-                                                            <p><span class="wpcf7-form-control-wrap your-message"><textarea
-                                                                        name="your-message" cols="40" rows="10"
-                                                                        class="wpcf7-form-control wpcf7-textarea"
-                                                                        aria-invalid="false"
-                                                                        placeholder="Votre message"></textarea></span>
+                                                            <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Votre nom"></span></p>
+                                                            <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Votre email"></span></p>
+                                                            <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Votre message"></textarea></span>
                                                             </p>
-                                                            <div><input type="submit" value="Soumettre"
-                                                                    class="wpcf7-form-control wpcf7-submit"><span
-                                                                    class="ajax-loader"></span></div>
+                                                            <div><input type="submit" value="Soumettre" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -175,7 +155,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -184,8 +164,7 @@
                         <div class="row">
 
                             <div class="col-md-3">
-                                <div class="footer-site-info">2023 © <a
-                                        href="#" target="_blank">Fait par Yasmine, François et Vianney - Simplon CDA Fullstak 2023 </a></div>
+                                <div class="footer-site-info">2023 © <a href="#" target="_blank">Fait par Yasmine, François et Vianney - Simplon CDA Fullstak 2023 </a></div>
                             </div>
 
                             <div class="col-md-6">
@@ -219,16 +198,12 @@
 
 
 
-            <script src="./Style/script.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-                integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-                crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-                crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" src="index.js"></script>
+
 </body>
 
 </html>

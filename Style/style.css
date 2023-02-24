@@ -5,7 +5,7 @@
 
 /* ----------------------------HEADER------------------------------ */
 .navbar {
-    /* background-image: url(/Asset/fondHeader.png); */
+    background-image: url("../Asset/fondHeader.png");
     background-position: 75% 25%;
     display: flex;
     align-items: center;
@@ -194,7 +194,7 @@ footer p, footer strong, footer b, footer {
 }
 
 .footer-top {
-    background-image: url(/Asset/fondHeader.png);
+    background-image: url("../Asset/fondHeader.png");
  
     background-size: cover;
     background-position: center;
@@ -540,7 +540,7 @@ footer .widget ul {
 .widget_gallery li {
     display: inline-block;
     width: 33.33%;
-    float: left;
+    /* float: left; */
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
