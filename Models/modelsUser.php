@@ -1,6 +1,6 @@
 <?php
 
-function getBDD()
+function getBdd()
 {
     try {
         $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', 'root');
@@ -93,3 +93,6 @@ function deleteUser($id)
     $query->bindParam(':id', $id);
     $query->execute();
 }
+
+
+

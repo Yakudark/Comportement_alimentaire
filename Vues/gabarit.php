@@ -1,10 +1,11 @@
-<?php session_start();
+<?php
+// session_start();
 
-// Vérification de l'authentification de l'utilisateur
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header('Location: index.php');
-    exit;
-}
+// // Vérification de l'authentification de l'utilisateur
+// if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+//     header('Location: index.php');
+//     exit;
+// }
 ?>
 
 <!DOCTYPE html>

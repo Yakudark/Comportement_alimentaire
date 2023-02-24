@@ -1,14 +1,6 @@
 <?php
+require('./Models/modelsUser.php');
 
-function getBDD()
-{
-    try {
-        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', 'root');
-        return $bdd;
-    } catch (Exception $e) {
-        die('Erreur :' . $e->getMessage());
-    }
-}
 
 function getAllFood()
 {
