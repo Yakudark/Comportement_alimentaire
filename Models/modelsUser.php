@@ -3,7 +3,7 @@
 function getBdd()
 {
     try {
-        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', 'root');
+        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', '');
         return $bdd;
     } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());
@@ -22,7 +22,7 @@ function isEmailUnique($email)
 function signIn($firstname, $lastname, $email, $password)
 {
     $bdd = getBdd();
-    if (isEmailUnique($email)) {
+    if (isEmailUnique($email))  {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $query = $bdd->prepare("INSERT INTO users (firstname, lastname, email, pwd) VALUES (:firstname, :lastname, :email, :pwd)");
         $query->bindParam(':firstname', $firstname);
