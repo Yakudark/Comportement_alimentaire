@@ -1,5 +1,9 @@
 <?php
+
+
 include('Controllers\controllers.php');
+
+
 
 try {
     if (isset($_GET['action'])) {
