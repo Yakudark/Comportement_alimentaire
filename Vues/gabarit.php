@@ -28,6 +28,7 @@
 
 <body>
     <header>
+
         <div class="navbar">
             <div class="logo">
                 <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
@@ -65,8 +66,8 @@
             </label>
         </div>
         <div class="item-list">
-            <div class="connect">Se connecter</div>
-            <div class="inscription">S'inscrire</div>
+            <a href=".\index.php?action=logIn"> <div class="connect">Se connecter</div></a>
+           <a href=".\index.php?action=signIn"> <div class="inscription">S'inscrire</div></a>
 
         </div>
         </label>

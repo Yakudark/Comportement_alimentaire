@@ -5,12 +5,14 @@ try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'signIn') {
             signInUser();
-        } else 
-        if ($_GET['action'] == 'logIn') {
+        } else if ($_GET['action'] == 'validSignIn') {
+            validSignIn();
+        } else if ($_GET['action'] == 'logIn') {
             logInUser();
         } else if ($_GET['action'] == 'addUserInfo') {
             addUserInfo();
         }
+
         // else 
         // if ($_GET['action'] == 'deleteClient') {
         //     deleteAClient();

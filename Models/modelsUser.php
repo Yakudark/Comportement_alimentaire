@@ -19,12 +19,14 @@ function isEmailUnique($email)
     return $count == 0;
 }
 
-function signIn($email, $password)
+function signIn($firstname, $lastname, $email, $password)
 {
     $bdd = getBdd();
     if (isEmailUnique($email))  {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $query = $bdd->prepare("INSERT INTO users (email, pwd) VALUES (:email, :pwd)");
+        $query = $bdd->prepare("INSERT INTO users (firstname, lastname, email, pwd) VALUES (:firstname, :lastname, :email, :pwd)");
+        $query->bindParam(':firstname', $firstname);
+        $query->bindParam(':lastname', $lastname);
         $query->bindParam(':email', $email);
         $query->bindParam(':pwd', $hashed_password);
         $query->execute();
