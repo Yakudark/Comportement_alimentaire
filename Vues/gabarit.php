@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" src="index.js"></script>
     <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="./Style/SignIn.css">
     <title><?= $titre ?></title>
 </head>
 
@@ -31,8 +32,8 @@
                 <li>Articles</li>
                 <li>Recettes</li>
             </ul>
-            <button>Se connecter</button>
-            <button>S’inscrire</button>
+            <a href=<?= ".\index.php?action=logIn" ?>><button>Se connecter</button></a>
+            <a href=<?= ".\index.php?action=signIn" ?>><button>S’inscrire</button></a>
         </nav>
     </header>
     <div id="contenu">

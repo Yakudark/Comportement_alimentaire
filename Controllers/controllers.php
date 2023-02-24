@@ -12,10 +12,19 @@ function accueil()
 
 function signInUser()
 {
-    echo "hello";
+    require './Vues/VueSignIn.php';
+}
+
+function validSignIn()
+{
 }
 
 function logInUser()
+{
+    require './Vues/VueLogIn.php';
+}
+
+function validLogIn()
 {
     if (isset($_POST)) {
         $email = $_POST['email'];
