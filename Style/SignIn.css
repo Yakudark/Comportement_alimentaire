@@ -20,7 +20,7 @@ body{
     color: green;
     border-color: #3FC068;
 }
-.icon, .title{
+.icon, .title, #arrow{
     color: #3FC068;
 }
 .btns{
@@ -31,6 +31,7 @@ body{
 .title{
     padding-bottom: 5%;
     margin: auto;
+
 }
 .row{
     display: flex !important;
@@ -40,13 +41,15 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.redirection{
+    display: flex;
+    justify-content: space-between;
+}
 .input-area{
+    width: 100%;
     border: none;
     border-bottom: 1px solid green;
 }
 #faUser{
     width: 15%;
-}
-#template{
-    display: none;
 }
