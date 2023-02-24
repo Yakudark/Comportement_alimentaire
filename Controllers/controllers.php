@@ -17,6 +17,14 @@ function signInUser()
 
 function validSignIn()
 {
+    if (isset($_POST)){
+        $firstname = $_POST['prenom'];
+        $lastname = $_POST['nom'];
+        $email = $_POST['email'];
+        $pwd = $_POST['motdepasse'];
+
+        signIn($firstname, $lastname, $email, $pwd);
+    }
 }
 
 function logInUser()

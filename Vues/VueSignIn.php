@@ -15,7 +15,7 @@ ob_start();
                             </svg>
                     </div>
                 </div>
-                <form action="inscription.php" method="post">
+                <form action="<?= ".\index.php?action=validSignIn"?>" method="post">
                     <label for="name"></label>
                     <input type="text" id="nom" class="input-area" name="nom" placeholder="Name" required><br><br>
                 
