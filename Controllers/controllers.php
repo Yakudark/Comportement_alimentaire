@@ -1,7 +1,7 @@
 <?php
 require('././Models/modelsUser.php');
-require('././Models/modelsFood.php');
-require('././Models/modelsDate.php');
+// require('././Models/modelsFood.php');
+// require('././Models/modelsDate.php');
 
 // Affiche la liste de tous les employés de l'entreprise
 function accueil()
@@ -12,6 +12,7 @@ function accueil()
 
 function signInUser()
 {
+    echo "hello";
 }
 
 function logInUser()
