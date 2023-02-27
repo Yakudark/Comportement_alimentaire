@@ -69,9 +69,9 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
+                                                    <i class="bi bi-universal-access"></i>
                                                 </span>
-                                                <span class="title">Les légumes</span>
+                                                <span class="title">Légumes</span>
                                             </span>
                                             <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
@@ -90,13 +90,11 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-bullseye"></i>
+                                                    <i class="bi bi-universal-access"></i>
                                                 </span>
-                                                <span class="title">About</span>
+                                                <span class="title">Légumes secs</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -113,13 +111,11 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-braille"></i>
+                                                    <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Services</span>
+                                                <span class="title">Féculents</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -136,13 +132,11 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-id-badge"></i>
+                                                    <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Resume</span>
+                                                <span class="title">Viandes</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -159,13 +153,11 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-life-ring"></i>
+                                                    <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Works</span>
+                                                <span class="title">Oeufs</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -182,13 +174,11 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-clipboard"></i>
+                                                    <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Testimonials</span>
+                                                <span class="title">Poissons</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -205,17 +195,18 @@ ob_start();
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="fa fa-map-signs"></i>
+                                                    <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Contact</span>
+                                                <span class="title">Fruits de mer</span>
                                             </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
-                                            </svg>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
+
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
