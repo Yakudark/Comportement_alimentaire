@@ -582,42 +582,6 @@ textarea {
     color: white;
 }
 
-img {
-    border-style: none;
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-.widget_gallery a {
-    display: inline-block;
-}
-
-footer .widget ul {
-    list-style: none;
-    margin-top: 5px;
-}
-
-.widget_gallery ul {
-    padding-left: 0;
-    display: table;
-}
-
-.widget_gallery li {
-    display: inline-block;
-    width: 33.33%;
-    /* float: left; */
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    padding: 2px;
-}
-
-.widget_gallery.gallery-grid-4 li {
-    width: 30%;
-}
-
 .footer-site-info {
     padding-top: 10px;
 }
