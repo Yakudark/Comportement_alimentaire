@@ -72,5 +72,9 @@ function addUserInfo()
 // Affiche une erreur
 function erreur($msgErreur)
 {
-    require './Vues/vueErreur.php';
+    require './Vues/VueErreur.php';
+}
+
+function VuesUser() {
+    require './Vues/VueUser.php';
 }

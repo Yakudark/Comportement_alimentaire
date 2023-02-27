@@ -21,9 +21,10 @@ if ($_SESSION['user_id']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./Style/Style.css">
     <link rel="stylesheet" href="./Style/SignIn.css">
+    <link rel="stylesheet" href="./Style/styleUser.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title><?= $titre ?></title>
 
 </head>
@@ -39,9 +40,7 @@ if ($_SESSION['user_id']) {
 
                 <ul class="breadcrumb">
                     <li class="breadcrumb__item breadcrumb__item-firstChild">
-                        <span class="breadcrumb__inner">
-                            <span class="breadcrumb__title">Perdre du poids</span>
-                        </span>
+                        <a href="index.php?action=VuesUser"><span class="breadcrumb__title">Perdre du poids</span></a>
                     </li>
                     <li class="breadcrumb__item">
                         <span class="breadcrumb__inner">
@@ -69,9 +68,10 @@ if ($_SESSION['user_id']) {
         <div class="item-list">
             <a href=".\index.php?action=logIn">
                 <div class="connect">Se connecter</div>
+
             </a>
             <a href=".\index.php?action=signIn">
-                <div class="inscription">S'inscrire</div>
+                <div class="inscriptions">S'inscrire</div>
             </a>
 
         </div>
