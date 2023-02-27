@@ -27,7 +27,7 @@ function validSignIn()
 
         $result = signIn($firstname, $lastname, $email, $pwd);
         if ($result) {
-            accueil();
+            require './Vues/VueLogIn.php';
         }
     }
 }
@@ -53,7 +53,7 @@ function validLogIn()
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
 
-            accueil();
+            require './Vues/VueUser.php';
         } else {
             echo "email ou mpd invalide";
         }

@@ -1,5 +1,27 @@
 <?php
 
+// require './vendor/autoload.php';
+
+// use Dotenv\Dotenv;
+
+// $dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+// $dotenv->load();
+
+// print_r($_ENV);
+
+// require_once __DIR__ . '/vendor/autoload.php';
+
+// use Dotenv\Dotenv;
+
+// $dotenv = Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
+// print_r($_ENV);
+
+
+$db_host = getenv('DATABASE_URL');
+echo $db_host;
+
 function getBdd()
 {
     try {
@@ -30,6 +52,9 @@ function signIn($firstname, $lastname, $email, $password)
         $query->bindParam(':email', $email);
         $query->bindParam(':pwd', $hashed_password);
         $query->execute();
+
+        $result = "inscription validée";
+        return $result;
     } else {
         echo "adresse mail déjà enregistrée";
     }

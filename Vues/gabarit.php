@@ -8,9 +8,16 @@
 // }
 
 // session_start();
-if ($_SESSION['user_id']) {
+if (!isset($_SESSION['authenticated'])) {
+    // header('Location: index.php');
+    // exit;
+} else {
     echo $_SESSION['user_id'];
 }
+
+// if ($_SESSION['user_id']) {
+//     echo $_SESSION['user_id'];
+// }
 ?>
 
 <!DOCTYPE html>
