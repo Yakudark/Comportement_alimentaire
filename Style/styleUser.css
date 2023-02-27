@@ -1,5 +1,7 @@
 .section_user_1 {
     display: flex;
+    background-image: url(../Asset/dietUser.png) ;
+    background-position: left;
 }
 .section_user_1_gauche {
     display: flex;
@@ -63,6 +65,94 @@ text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
     width: 50%;
 }
 /* -------------------Fin des boutons de choix de repas---------------- */
+/* ------------------CARTE UTILISATEUR--------------------------------- */
+.container_user {
+    background-color: #fff;
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 300px 600px;
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+}
+.container_user img {
+    width: 184px;
+    height: 300px;
+    border-radius: 5px 0 0 5px;
+}
+.container_user .btn_height {
+    position: absolute;
+    bottom: -20px;
+    right: 5px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background-color: #3FC068;
+    color: #fff;
+    padding: 22px 45px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+}
+.container_user .btn_weight {
+    position: absolute;
+    bottom: -20px;
+    right: 300px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background-color: #3FC068;
+    color: #fff;
+    padding: 22px 45px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+}
+
+.container__text {
+    padding: 40px 40px 0;
+}
+.container__text h1 {
+    color: #351897;
+    font-weight: 400;
+}
+.container__text .container__text__star span {
+    font-size: 0.8rem;
+    color: #ffa800;
+    margin: -5px 0 20px;
+}
+.container__text p {
+    font-size: 0.9rem;
+}
+.container__text .container__text__timing {
+    display: flex;
+    margin: 20px 0 10px;
+}
+.container__text .container__text__timing .container__text__timing_time {
+    margin-right: 40px;
+}
+.container__text .container__text__timing h2 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #818189;
+}
+.container__text .container__text__timing p {
+    color: #351897;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+
+
+
 
 /* -----------------CHOIX DES ALIMENTS--------------------------------- */
 
