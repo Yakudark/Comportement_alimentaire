@@ -12,7 +12,9 @@ try {
         } else if ($_GET['action'] == 'addUserInfo') {
             addUserInfo();
         }
-
+        else if ($_GET['action'] == 'VuesUser') {
+            VuesUser();
+        }
         // else 
         // if ($_GET['action'] == 'deleteClient') {
         //     deleteAClient();

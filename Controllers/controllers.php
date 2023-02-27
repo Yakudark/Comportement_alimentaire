@@ -17,7 +17,7 @@ function signInUser()
 
 function validSignIn()
 {
-    if (isset($_POST)){
+    if (isset($_POST)) {
         $firstname = $_POST['prenom'];
         $lastname = $_POST['nom'];
         $email = $_POST['email'];
@@ -58,5 +58,9 @@ function addUserInfo()
 // Affiche une erreur
 function erreur($msgErreur)
 {
-    require './Vues/vueErreur.php';
+    require './Vues/VueErreur.php';
+}
+
+function VuesUser() {
+    require './Vues/VueUser.php';
 }

@@ -67,6 +67,12 @@ nav .breadcrumb__item {
     cursor: pointer;
 }
 
+/* EN attendant d'avoir le vrai lien------------------------------------------------ */
+nav .breadcrumb__item a {
+    text-decoration:none;
+    color: black;
+}
+/* fin EN attendant d'avoir le vrai lien------------------------------------------------ */
 
 nav .breadcrumb__item:hover {
     background: #3FC068;
@@ -117,6 +123,11 @@ nav .breadcrumb__title {
 
 /*---END NAV--- */
 /* ---CONNEXION/INSCRIPTION---- */
+.item-list a {
+    text-decoration:none;
+    color:white;
+    text-align: center;
+}
 .hamburger {
     position: relative;
     width: 70px;
@@ -192,7 +203,7 @@ nav .breadcrumb__title {
 }
 
 .menu-button-wrapper .connect:hover,
-.inscription:hover {
+.inscriptions:hover {
     background-color: #E51A98;
 }
 
