@@ -6,6 +6,11 @@
 //     header('Location: index.php');
 //     exit;
 // }
+
+// session_start();
+if ($_SESSION['user_id']) {
+    echo $_SESSION['user_id'];
+}
 ?>
 
 <!DOCTYPE html>
