@@ -9,6 +9,7 @@
 /* ----------------------------HEADER------------------------------ */
 .navbar {
     background-image: url("../Asset/fondHeader.png");
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.749);
     background-position: 75% 25%;
     display: flex;
     align-items: center;
@@ -228,7 +229,6 @@ footer {
 
 .footer-top {
     background-image: url("../Asset/fondHeader.png");
-
     background-size: cover;
     background-position: center;
     padding: 0 0 20px;

@@ -2,7 +2,7 @@
 ob_start();
 ?>
 <link rel="stylesheet" href="./Style/styleUser.css">
-//-------Mettre ici le contenu-----------------
+
 <section class="section_user_1">
     <div class="section_user_1_gauche">
         <div class="buttons">
@@ -34,7 +34,45 @@ ob_start();
         </div>
     </div>
     <div class="section_user_1_droite">
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, temporibus.</h2>
+        <div class="container_user">
+            <img src="./Asset/Normal.png" alt="IMC image" />
+            <div class="container__text">
+                <h1>Bienvenue "div nameUser"</h1>
+                <div class="nameUser">
+
+                </div>
+                <div class="container__text__star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p>
+                    Voici le récapitulatif de vos données
+                </p>
+                <div class="container__text__timing">
+                    <div class="container__text__timing_time">
+                        <h2>Poids</h2>
+                        <p>Kg</p>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Taille</h2>
+                        <p>Cm</p>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Votre IMC</h2>
+                        <p>imc</p>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Votre quotat calorifique</h2>
+                        <p>Kcal</p>
+                    </div>
+                </div>
+                <button class="btn_weight btn_user">Modifier votre poids</button>
+                <button class="btn_height btn_user">Modifier votre taille</button>
+            </div>
+        </div>
     </div>
 </section>
 <section class="section_user_2">
