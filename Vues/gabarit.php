@@ -26,6 +26,7 @@ if ($_SESSION['user_id']) {
     <link rel="stylesheet" href="./Style/Style.css">
     <link rel="stylesheet" href="./Style/SignIn.css">
     <link rel="stylesheet" href="./Style/styleUser.css">
+    <link rel="stylesheet" href="./Style/styleAccueil.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title><?= $titre ?></title>
 

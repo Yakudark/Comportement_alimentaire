@@ -1,32 +1,33 @@
 <?php $titre = "Profil";
 ob_start();
 ?>
-<link rel="stylesheet" href="./Style/styleUser.css">
+<!-- <link rel="stylesheet" href="./Style/styleUser.css"> -->
 
 <section class="section_user_1">
     <div class="section_user_1_gauche">
         <div class="buttons">
-            <label>
+            <label class="pdj">
                 <input type="checkbox" name="check">
                 <span></span>
                 <i class="bi bi-cup-hot-fill"></i>
+
             </label>
-            <label>
+            <label class="encas">
                 <input type="checkbox" name="check">
                 <span></span>
                 <i class="bi bi-egg-fried"></i>
             </label>
-            <label>
+            <label class="dejeuner">
                 <input type="checkbox" name="check">
                 <span></span>
                 <i class="bi bi-brightness-high-fill"></i>
             </label>
-            <label>
+            <label class="gouter">
                 <input type="checkbox" name="check">
                 <span></span>
                 <i class="bi bi-apple"></i>
             </label>
-            <label>
+            <label class="diner">
                 <input type="checkbox" name="check">
                 <span></span>
                 <i class="bi bi-moon-stars-fill"></i>
@@ -40,13 +41,6 @@ ob_start();
                 <h1>Bienvenue "div nameUser"</h1>
                 <div class="nameUser">
 
-                </div>
-                <div class="container__text__star">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
                 </div>
                 <p>
                     Voici le récapitulatif de vos données
@@ -106,12 +100,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="bi bi-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Légumes</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -127,12 +119,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="bi bi-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Légumes secs</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -148,12 +138,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Féculents</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -169,12 +157,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Viandes</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -190,12 +176,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Oeufs</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -211,12 +195,10 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Poissons</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
                                     <div class="hexagon-item">
@@ -232,12 +214,155 @@ ob_start();
                                         </div>
                                         <a class="hex-content">
                                             <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa fa-universal-access"></i>
-                                                </span>
+
                                                 <span class="title">Fruits de mer</span>
                                             </span>
-                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+
+                                <div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Produits laitiers</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Fruits</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Fruits secs et oléagineux</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Produits sucrés</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Corps gras</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Boissons</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+
+                                                <span class="title">Boissons alcoolisées</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexago.png" alt="Image d'un hexagone">
                                         </a>
                                     </div>
 
