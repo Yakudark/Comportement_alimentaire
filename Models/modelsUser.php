@@ -125,3 +125,23 @@ function deleteUser($id)
     $query->bindParam(':id', $id);
     $query->execute();
 }
+
+function updateAWeight($weight)
+{
+    $bdd = getBdd();
+    $query = $bdd->prepare("UPDATE users 
+    SET weight_user=:weight_user WHERE id=:id");
+    $query->bindParam(':id', $_SESSION['user_id']);
+    $query->bindParam(':weight_user', $weight);
+    $query->execute();
+}
+
+function updateASize($size)
+{
+    $bdd = getBdd();
+    $query = $bdd->prepare("UPDATE users 
+    SET height=:height WHERE id=:id");
+    $query->bindParam(':id', $_SESSION['user_id']);
+    $query->bindParam(':height', $size);
+    $query->execute();
+}

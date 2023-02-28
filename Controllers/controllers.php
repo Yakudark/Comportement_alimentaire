@@ -50,9 +50,11 @@ function validLogIn()
                 'secure' => true
             ]);
             session_start();
+            global $_SESSION;
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
 
+            $userInfo = getOneUser($user['id']);
             require './Vues/VueUser.php';
         } else {
             echo "email ou mpd invalide";
@@ -69,8 +71,34 @@ function addUserInfo()
 {
 }
 
+function updateWeight()
+{
+    session_start();
+    $weight = $_GET['weight'];
+    echo $_SESSION['user_id'];
+    updateAWeight($weight);
+
+    $userInfo = getOneUser($_SESSION['user_id']);
+    require './Vues/VueUser.php';
+}
+
+function updateSize()
+{
+    session_start();
+    $size = $_GET['size'];
+    echo $_SESSION['user_id'];
+    updateASize($size);
+
+    $userInfo = getOneUser($_SESSION['user_id']);
+    require './Vues/VueUser.php';
+}
 // Affiche une erreur
 function erreur($msgErreur)
 {
-    require './Vues/vueErreur.php';
+    require './Vues/VueErreur.php';
+}
+
+function VuesUser()
+{
+    require './Vues/VueUser.php';
 }

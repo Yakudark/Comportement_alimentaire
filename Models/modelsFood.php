@@ -20,3 +20,13 @@ function getOnefood($id)
     $onefood = $query->fetch();
     return $onefood;
 }
+
+function getAllFoodFromOneCategory($category)
+{
+    $bdd = getBdd();
+    $query = $bdd->prepare("SELECT * FROM food WHERE category = :category");
+    $query->bindParam(':category', $category);
+    $query->execute();
+    $food = $query->fetch();
+    return $food;
+}
