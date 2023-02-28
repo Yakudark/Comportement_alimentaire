@@ -80,7 +80,7 @@ $edit = false;
                     </div>
                     <div class="container__text__timing_time">
                         <h2>Votre IMC</h2>
-                        <p>imc</p>
+                        <span id="imc">imc</span>
                     </div>
                     <div class="container__text__timing_time">
                         <h2>Votre quotat calorifique</h2>
