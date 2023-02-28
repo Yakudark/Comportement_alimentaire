@@ -1,7 +1,7 @@
 <?php $titre = "Accueil";
 ob_start();
 ?>
-
+<link rel="stylesheet" href="./Style/styleAccueil.css">
 <h1>Page d'accueil</h1>
 
 <section class="testimony">
@@ -21,7 +21,7 @@ ob_start();
                             <img src="./Asset/JESSICA-ROND.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            J'ai perdu 10 kilos grâce à ScaleIn ! Au début, j'étais sceptique quant à l'idée de suivre un programme en ligne pour perdre du poids, mais j'ai été agréablement surprise par la qualité des conseils et des programmes personnalisés que j'ai reçus. Les recettes étaient délicieuses et faciles à préparer, et les exercices étaient adaptés à mon niveau de condition physique. J'ai maintenant retrouvé une confiance en moi que je n'avais pas ressentie depuis longtemps.
 
                     </figure>
                 </li>
@@ -31,7 +31,7 @@ ob_start();
                             <img src="./Asset/LAETITIA-ROND.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            ScaleIn a été une révélation pour moi. J'ai réussi à perdre 15 kilos en quelques mois grâce aux conseils de leur programme. Je suis plus active et j'ai plus d'énergie qu'avant. Je recommande ce programme à toutes les personnes qui souhaitent perdre du poids et retrouver leur bien-être.
 
                         </figcaption>
                     </figure>
@@ -42,7 +42,7 @@ ob_start();
                             <img src="./Asset/MCLAIRE-ROND.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Je suis tellement reconnaissante envers ScaleIn pour m'avoir aidé à perdre 20 kilos en seulement 6 mois. Leur approche personnalisée et leur suivi attentif ont été un véritable coup de pouce pour moi. J'ai maintenant une meilleure compréhension de ce qu'il faut pour être en bonne santé et je suis fière de dire que j'ai réussi à transformer ma vie grâce à ScaleIn.
 
                         </figcaption>
                     </figure>
@@ -53,7 +53,7 @@ ob_start();
                             <img src="./Asset/NICOLAS-ROND-1.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Je suis un homme et j'avais besoin de perdre du poids depuis longtemps, mais je ne savais pas par où commencer. Heureusement, j'ai découvert ScaleIn et leur programme m'a aidé à perdre 12 kilos en 3 mois. Les exercices étaient intenses mais réalisables, et les conseils diététiques étaient adaptés à mes préférences alimentaires. Je suis maintenant plus en forme et plus confiant que jamais.
 
                         </figcaption>
                     </figure>
@@ -64,7 +64,7 @@ ob_start();
                             <img src="./Asset/ODILE-ROND.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Je n'ai jamais été aussi heureuse de ma vie qu'après avoir perdu 8 kilos grâce à ScaleIn. Les conseils étaient simples à suivre et les résultats ont été incroyables. Je suis maintenant plus en forme et plus confiante que jamais. Je recommande vivement ScaleIn à tous ceux qui cherchent à perdre du poids et à retrouver leur santé.
 
                         </figcaption>
                     </figure>
@@ -75,7 +75,7 @@ ob_start();
                             <img src="./Asset/SABSAM-ROND.png" alt="">
                         </div>
                         <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nous avons décidé de suivre le programme ScaleIn ensemble et nous sommes tellement heureux de l'avoir fait. Nous avons tous les deux réussi à perdre du poids et nous sommes maintenant plus en forme et plus actifs que jamais. Le programme nous a donné une meilleure compréhension de ce qu'il faut pour être en bonne santé et nous sommes maintenant plus motivés que jamais à continuer sur cette voie.
 
                         </figcaption>
                     </figure>
