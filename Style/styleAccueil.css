@@ -1,8 +1,10 @@
 .testimony {
-    background-image: url(./Asset/dietUser.png);
+    background-image: url(../Asset/dietUser.png);
+    background-size: cover;
 }
 .testimony h2 {
     text-align: center;
+    color: blue;
 }
 .testimony_container {
     max-width: 1044px;
