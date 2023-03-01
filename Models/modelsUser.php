@@ -1,5 +1,27 @@
 <?php
 
+// require './vendor/autoload.php';
+
+// use Dotenv\Dotenv;
+
+// $dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+// $dotenv->load();
+
+// print_r($_ENV);
+
+// require_once __DIR__ . '/vendor/autoload.php';
+
+// use Dotenv\Dotenv;
+
+// $dotenv = Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
+// print_r($_ENV);
+
+
+$db_host = getenv('DATABASE_URL');
+echo $db_host;
+
 function getBdd()
 {
     try {
@@ -30,6 +52,9 @@ function signIn($firstname, $lastname, $email, $password)
         $query->bindParam(':email', $email);
         $query->bindParam(':pwd', $hashed_password);
         $query->execute();
+
+        $result = "inscription validée";
+        return $result;
     } else {
         echo "adresse mail déjà enregistrée";
     }
@@ -98,5 +123,25 @@ function deleteUser($id)
     $bdd = getBdd();
     $query = $bdd->prepare("DELETE FROM users WHERE id=:id");
     $query->bindParam(':id', $id);
+    $query->execute();
+}
+
+function updateAWeight($weight)
+{
+    $bdd = getBdd();
+    $query = $bdd->prepare("UPDATE users 
+    SET weight_user=:weight_user WHERE id=:id");
+    $query->bindParam(':id', $_SESSION['user_id']);
+    $query->bindParam(':weight_user', $weight);
+    $query->execute();
+}
+
+function updateASize($size)
+{
+    $bdd = getBdd();
+    $query = $bdd->prepare("UPDATE users 
+    SET height=:height WHERE id=:id");
+    $query->bindParam(':id', $_SESSION['user_id']);
+    $query->bindParam(':height', $size);
     $query->execute();
 }

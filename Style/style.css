@@ -70,9 +70,10 @@ nav .breadcrumb__item {
 
 /* EN attendant d'avoir le vrai lien------------------------------------------------ */
 nav .breadcrumb__item a {
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
+
 /* fin EN attendant d'avoir le vrai lien------------------------------------------------ */
 
 nav .breadcrumb__item:hover {
@@ -125,10 +126,11 @@ nav .breadcrumb__title {
 /*---END NAV--- */
 /* ---CONNEXION/INSCRIPTION---- */
 .item-list a {
-    text-decoration:none;
-    color:white;
+    text-decoration: none;
+    color: white;
     text-align: center;
 }
+
 .hamburger {
     position: relative;
     width: 70px;
@@ -584,4 +586,25 @@ textarea {
 
 .footer-site-info {
     padding-top: 10px;
+}
+
+table {
+    background: pink;
+    height: 350px;
+}
+
+th,
+tr {
+    padding: 10px !important;
+    text-align: center;
+}
+
+.input-infos-weight,
+.input-infos-size {
+    width: 50px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }

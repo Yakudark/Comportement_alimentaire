@@ -1,43 +1,79 @@
 <?php $titre = "Profil";
 ob_start();
+$edit = false;
 ?>
+
 <link rel="stylesheet" href="./Style/styleUser.css">
 
 <!---------------------SECTION CARTE UTILISATEUR--------------------->
-<div class="section_user">
-    <div class="container_user">
-        <img src="./Asset/Normal.png" alt="IMC image" />
-        <div class="container__text">
-            <h1>Bienvenue "div nameUser"</h1>
-            <div class="nameUser">
+<div class="section_user_1_droite">
+        <div class="container_user">
+            <img src="./Asset/Normal.png" alt="IMC image" />
+            <div class="container__text">
+                <h1>Bienvenue <?= $userInfo['firstname'] . " " . $userInfo['lastname']; ?></h1>
+                <div class="nameUser">
 
+                </div>
+                <div class="container__text__star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p>
+                    Voici le récapitulatif de vos données
+                </p>
+                <div class="container__text__timing">
+                    <div class="container__text__timing_time">
+                        <h2>Poids</h2>
+                        <span id="infoWeight">
+                            <?php if (isset($userInfo['weight_user'])) {
+                                echo $userInfo['weight_user'];
+                            }
+                            ?>
+                        </span>
+                        <span>Kg</span>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Taille</h2>
+                        <span id="infoSize">
+                            <?php
+                            if (isset($userInfo['height'])) {
+                                echo $userInfo['height'];
+                            }
+                            ?>
+                        </span>
+                        <?php
+
+                        ?>
+                        <span>Cm</span>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Votre IMC</h2>
+                        <p>imc</p>
+                    </div>
+                    <div class="container__text__timing_time">
+                        <h2>Votre quotat calorifique</h2>
+                        <p>Kcal</p>
+                    </div>
+                </div>
+                <button class="btn_weight btn_user">
+                    <a id="updateWeightLink">
+                        Modifier votre poids
+                    </a>
+                </button>
+                <button class="btn_height btn_user">
+                    <a id="updateSizeLink">
+                        Modifier votre taille
+                    </a>
+                </button>
             </div>
-            <p>
-                Voici le récapitulatif de vos données
-            </p>
-            <div class="container__text__timing">
-                <div class="container__text__timing_time">
-                    <h2>Poids</h2>
-                    <p>Kg</p>
-                </div>
-                <div class="container__text__timing_time">
-                    <h2>Taille</h2>
-                    <p>Cm</p>
-                </div>
-                <div class="container__text__timing_time">
-                    <h2>Votre IMC</h2>
-                    <p>imc</p>
-                </div>
-                <div class="container__text__timing_time">
-                    <h2>Votre quotat calorifique</h2>
-                    <p>Kcal</p>
-                </div>
-            </div>
-            <button class="btn_weight btn_user">Modifier votre poids</button>
-            <button class="btn_height btn_user">Modifier votre taille</button>
         </div>
     </div>
-</div>
+</section>
+<section class="section_user_2">
+    <div class="section_user_2_gauche">
 <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
 
 <!-- FORMULAIRE ------------------------------------------------->
@@ -157,8 +193,6 @@ ob_start();
             </div>
         </div>
     </div>
-</form>
-
 
 
 <?php $contenu = ob_get_clean(); ?>
