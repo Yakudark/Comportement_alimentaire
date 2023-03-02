@@ -28,9 +28,6 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="./Style/Style.css">
     <link rel="stylesheet" href="./Style/SignIn.css">
     <link rel="stylesheet" href="./Style/styleUser.css">
-    <!-- <script>
-        window.TESTING = false;
-    </script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title><?= $titre ?></title>
 
@@ -90,7 +87,7 @@ if (isset($_SESSION['user_id'])) {
                 <a href=".\index.php?action=VuesUser">
                     <div class="connect">Mon profil</div>
                 </a>
-                <a href=".\index.php?action=logIn">
+                <a href=".\index.php?action=deconnection">
                     <div class="connect">Déconnexion</div>
                 </a>
             <?php

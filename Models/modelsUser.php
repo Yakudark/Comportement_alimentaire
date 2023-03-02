@@ -12,11 +12,6 @@ require_once 'C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire\vendor/au
 $dotenv = Dotenv::createImmutable('C:/MAMP/htdocs/app_alimentation/Comportement_alimentaire/');
 $dotenv->load();
 
-print_r($_ENV['DATABASE_URL']);
-print_r($_ENV['PASSWORD']);
-print_r($_ENV['USER']);
-
-
 $db_host = getenv('DATABASE_URL');
 echo $db_host;
 
