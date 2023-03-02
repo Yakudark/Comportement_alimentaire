@@ -19,11 +19,21 @@ ob_start();
                 </div>
                 <div class="tab-body" data-id="connexion">
 
-                    <form id="form-cnx" action="<?= ".\index.php?action=validLogIn" ?>" method="post">
-
-                        <div class="row">
-                            <div class="icon">
-                                <i class="far fa-user"></i>
+                        <form id="form-cnx">
+            
+                            <div class="row">
+                                <div class="icon">
+                                    <i class="far fa-user"></i>
+                                </div>
+                                <input id="mail" class="input-area" type="text" placeholder="        Mail address">
+                            </div>
+                            </br>
+                            <div class="row">
+                                <div class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                
+                                <input id="pw" class="input-area" placeholder="        Password" type="password">
                             </div>
                             <input id="mail" class="input-area" type="text" placeholder="        Email" name="email">
                         </div>

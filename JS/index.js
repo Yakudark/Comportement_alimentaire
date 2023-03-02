@@ -106,3 +106,121 @@ hexagonItems.forEach(function(hexagonItem) {
     radioInput.checked = true;
   });
 });
+////////// Vérif Inscription et Log in ///////////
+// Log in
+let email = document.getElementById('#mail');
+let password = document.getElementById('#pw');
+
+// Sign in
+let createName = document.getElementById('#nom');
+let createFirstname = document.getElementById('#prenom');
+let createMail = document.getElementById('#email');
+let createPw = document.getElementById('#motdepasse');
+
+// Log in Password
+
+function checkPassword(password) {
+        // Vérifie la longueur
+    if (password.length < 8) {
+      return "Le mot de passe doit contenir au moins 8 caractères.";
+    }
+        // Vérifie si il y a une lettre minuscule et une majuscule
+    if (!password.match(/[a-z]/) || !password.match(/[A-Z]/)) {
+      return "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule.";
+    }
+        // Vérifie si il y a au moins un chiffre
+    if (!password.match(/\d/)) {
+      return "Le mot de passe doit contenir au moins un chiffre.";
+    }
+  
+    return "Le mot de passe est valide.";
+  }
+
+// Sign in Password
+
+function checkPw(createPw) {
+        // Vérifie la longueur
+    if (createPw.length < 8) {
+      return "Le mot de passe doit contenir au moins 8 caractères.";
+    }
+        // Vérifie si il y a une lettre minuscule et une majuscule
+    if (!createPw.match(/[a-z]/) || !createPw.match(/[A-Z]/)) {
+      return "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule.";
+    }
+        // Vérifie si il y a au moins un chiffre
+    if (!createPw.match(/\d/)) {
+      return "Le mot de passe doit contenir au moins un chiffre.";
+    }
+  
+    return "Le mot de passe est valide.";
+  }
+
+// Exemple d'utilisation pour les tests :
+// console.log(checkPassword("Abcd1234")); // Renvoie "Le mot de passe est valide."
+// console.log(checkPassword("abcd1234")); // Renvoie "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule."
+// console.log(checkPassword("abcd")); // Renvoie "Le mot de passe doit contenir au moins 8 caractères."
+// console.log(checkPassword("abcdefgh")); // Renvoie "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule."
+// console.log(checkPassword("12345678")); // Renvoie "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule."
+
+// Log in mail
+
+function checkEmail(email) {
+    // Vérifie s'il y a un seul symbole "@"
+    if (email.indexOf("@") === -1 || email.indexOf("@") !== email.lastIndexOf("@")) {
+      return "L'adresse email doit contenir un seul symbole '@'.";
+    }
+    return "L'adresse email est valide.";
+}
+
+// Sign in mail
+
+function checkMail(createMail) {
+    // Vérifie s'il y a un seul symbole "@"
+    if (createMail.indexOf("@") === -1 || createMail.indexOf("@") !== createMail.lastIndexOf("@")) {
+      return "L'adresse email doit contenir un seul symbole '@'.";
+    }
+    return "L'adresse email est valide.";
+}
+  // Exemple d'utilisation pour les tests :
+// console.log(checkEmail("johndoe@example.com")); // Renvoie "L'adresse email est valide."
+// console.log(checkEmail("johndoeexample.com")); // Renvoie "L'adresse email doit contenir un seul symbole '@'."
+
+
+function validateName(createName) {
+    // Vérifie que le nom contient uniquement des lettres et des espaces
+    const regex = /^[a-zA-Z\s]*$/;
+    if (!regex.test(createName)) {
+      return false;
+    }
+  
+    // Vérifie que le nom a une longueur comprise entre 2 et 50 caractères
+    if (createName.length < 2 || createName.length > 50) {
+      return false;
+    }
+  
+    return true;
+  }
+    // Exemple d'utilisation pour les tests :
+// console.log(validateName("Yasmine")); // Renvoie "Le nom est valide."
+// console.log(validateName("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
+// console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
+  
+  function validateFirstname(createFirstname) {
+    // Vérifie que le nom contient uniquement des lettres et des espaces
+    const regex = /^[a-zA-Z\s]*$/;
+    if (!regex.test(createFirstname)) {
+      return false;
+    }
+  
+    // Vérifie que le nom a une longueur comprise entre 2 et 50 caractères
+    if (createFirstname.length < 2 || createFirstname.length > 50) {
+      return false;
+    }
+  
+    return true;
+  }
+
+      // Exemple d'utilisation pour les tests :
+// console.log(validateFirstname("Yasmine")); // Renvoie "Le nom est valide."
+// console.log(validateFirstname("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
+// console.log(validateFirstname("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
