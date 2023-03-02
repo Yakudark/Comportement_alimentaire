@@ -2,7 +2,6 @@
 ob_start();
 ?>
 <link rel="stylesheet" href="./Style/styleAccueil.css">
-<h1>Page d'accueil</h1>
 
 <section class="testimony">
     <h2>Témoignages</h2>

@@ -177,6 +177,7 @@ nav .breadcrumb__title {
     font-weight: 300;
     opacity: 0;
     user-select: none;
+    z-index: 1;
 }
 
 .menu-button-wrapper .item-list div {

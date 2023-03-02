@@ -3,7 +3,7 @@ CREATE TABLE users(
     firstname VARCHAR(50),
     lastname VARCHAR(50),
     email VARCHAR(50) NOT NULL,
-    pwd VARCHAR(50) NOT NULL,
+    pwd VARCHAR(350) NOT NULL,
     weight_user INT,
     height INT,
     sexe VARCHAR(50),
