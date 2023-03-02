@@ -121,7 +121,7 @@ $edit = false;
                                     <div class="hexagon-menu clear">
                                         <?php
                                         $categories1 = array("Légumes", "Légumes secs", "Féculents", "Viandes", "Oeufs", "Poissons", "Fruits de mer");
-
+                                        ?>
                                 <div class="hexagon-menu clear">
                                     <div class="hexagon-item">
                                         <div class="hex-item">
