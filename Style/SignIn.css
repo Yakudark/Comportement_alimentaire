@@ -1,7 +1,7 @@
 /* body{
     background-color: darkgray !important;
 } */
-.inscription{
+.inscription {
     width: 45%;
     padding: 5%;
     margin: auto;
@@ -9,47 +9,70 @@
     border-radius: 25px;
     box-shadow: 0 5px 5px #a6a6a6;
 }
-.btn-inscription, .login-btn{
+
+.btn-inscription,
+.login-btn {
     border-radius: 20px;
     background-color: whitesmoke;
     border-color: green;
     color: #3FC068;
 }
-.btn-inscription:hover, .login-btn:hover{
+
+.btn-inscription:hover,
+.login-btn:hover {
     scale: 1.1;
     color: green;
     border-color: #3FC068;
 }
-.icon, .title, #arrow{
+
+.icon,
+.title,
+#arrow {
     color: #3FC068;
 }
-.btns{
+
+.btns {
     display: flex;
     justify-content: space-around;
     padding-top: 8%;
 }
-.title{
+
+.title {
     padding-bottom: 5%;
     margin: auto;
 
 }
-.row{
+
+.row {
     display: flex !important;
     flex-direction: row !important;
 }
-.head{
+
+.head {
     display: flex;
     justify-content: space-around;
 }
-.redirection{
+
+.redirection {
     display: flex;
     justify-content: space-between;
 }
-.input-area{
+
+.input-area {
     width: 100%;
     border: none;
     border-bottom: 1px solid green;
 }
-#faUser{
+
+#faUser {
     width: 15%;
+}
+
+.sexe {
+    width: 10%;
+    height: 50%;
+}
+
+#contenu {
+    margin: 30px;
 }

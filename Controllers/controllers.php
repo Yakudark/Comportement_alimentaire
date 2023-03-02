@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 function accueil()
 {
     // $clients = getClients();
+    session_start();
     require './Vues/VueAccueil.php';
 }
 
@@ -24,8 +25,10 @@ function validSignIn()
         $lastname = $_POST['nom'];
         $email = $_POST['email'];
         $pwd = $_POST['motdepasse'];
+        $date_of_birth = $_POST['date_of_birth'];
+        $sexe = $_POST['sexe'];
 
-        $result = signIn($firstname, $lastname, $email, $pwd);
+        $result = signIn($firstname, $lastname, $email, $pwd, $date_of_birth, $sexe);
         if ($result) {
             require './Vues/VueLogIn.php';
         }
@@ -65,6 +68,7 @@ function validLogIn()
 function logOutUser()
 {
     session_destroy();
+    require './Vues/VueAccueil.php';
 }
 
 function addUserInfo()
@@ -92,6 +96,33 @@ function updateSize()
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
 }
+
+function calculateQuotKcal()
+{
+    // session_start();
+    if ($_SESSION['user_id']) {
+        $userInfo = getOneUser($_SESSION['user_id']);
+        // require './Vues/VueUser.php';
+
+        $weight = $userInfo['weight_user'];
+        $height = $userInfo['height'];
+        $sexe = $userInfo['sexe'];
+        $date_of_birth = $userInfo['date_of_birth'];
+        $date_actuelle = date("Y-m-d");
+        $age = date_diff(date_create($date_of_birth), date_create($date_actuelle));
+        $age_str = $age->format('%y'); // Formatte l'objet DateInterval en une chaîne de caractères
+        $kcalNecessary = 0;
+
+        if ($sexe == "féminin") {
+            $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) + 5;
+            // echo $kcalNecessary;
+        } else if ($sexe == "masculin") {
+            $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) - 161;
+            // echo $kcalNecessary;
+        }
+    }
+    return $kcalNecessary;
+}
 // Affiche une erreur
 function erreur($msgErreur)
 {
@@ -100,5 +131,7 @@ function erreur($msgErreur)
 
 function VuesUser()
 {
+    session_start();
+    $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
 }

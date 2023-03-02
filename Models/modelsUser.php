@@ -41,16 +41,18 @@ function isEmailUnique($email)
     return $count == 0;
 }
 
-function signIn($firstname, $lastname, $email, $password)
+function signIn($firstname, $lastname, $email, $password, $date_of_birth, $sexe)
 {
     $bdd = getBdd();
     if (isEmailUnique($email)) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $query = $bdd->prepare("INSERT INTO users (firstname, lastname, email, pwd) VALUES (:firstname, :lastname, :email, :pwd)");
+        $query = $bdd->prepare("INSERT INTO users (firstname, lastname, email, pwd, date_of_birth, sexe) VALUES (:firstname, :lastname, :email, :pwd, :date_of_birth, :sexe)");
         $query->bindParam(':firstname', $firstname);
         $query->bindParam(':lastname', $lastname);
         $query->bindParam(':email', $email);
         $query->bindParam(':pwd', $hashed_password);
+        $query->bindParam(':date_of_birth', $date_of_birth);
+        $query->bindParam(':sexe', $sexe);
         $query->execute();
 
         $result = "inscription validée";

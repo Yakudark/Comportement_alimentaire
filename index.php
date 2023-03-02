@@ -13,12 +13,15 @@ try {
             addUserInfo();
         } else if ($_GET['action'] == 'validLogIn') {
             validLogIn();
+            calculateQuotKcal();
         } else if ($_GET['action'] == 'VuesUser') {
             VuesUser();
         } else if ($_GET['action'] == 'updateWeight') {
             updateWeight();
         } else if ($_GET['action'] == 'updateSize') {
             updateSize();
+        } else if ($_GET['action'] == 'deconnection') {
+            logOutUser();
         }
         // else 
         // if ($_GET['action'] == 'deleteClient') {

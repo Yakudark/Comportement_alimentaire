@@ -1,5 +1,6 @@
 <?php $titre = "Profil";
 ob_start();
+$kcalNecessary = calculateQuotKcal();
 $edit = false;
 ?>
 
@@ -8,7 +9,7 @@ $edit = false;
 <!---------------------SECTION CARTE UTILISATEUR--------------------->
 <div class="section_user_1_droite">
     <div class="container_user">
-        <img src="./Asset/Normal.png" alt="IMC image" />
+        <img src="#" alt="IMC image" id="IMCImage" />
         <div class="container__text">
             <h1>Bienvenue <?= $userInfo['firstname'] . " " . $userInfo['lastname']; ?></h1>
             <div class="nameUser">
@@ -44,11 +45,11 @@ $edit = false;
                 </div>
                 <div class="container__text__timing_time">
                     <h2>Votre IMC</h2>
-                    <p>imc</p>
+                    <span id="imc">imc</span>
                 </div>
                 <div class="container__text__timing_time">
                     <h2>Votre quotat calorifique</h2>
-                    <p>Kcal</p>
+                    <p><?= $kcalNecessary ?>Kcal</p>
                 </div>
             </div>
             <button class="btn_weight btn_user">

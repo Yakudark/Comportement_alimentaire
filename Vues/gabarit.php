@@ -73,13 +73,28 @@ if (isset($_SESSION['user_id'])) {
             </label>
         </div>
         <div class="item-list">
-            <a href=".\index.php?action=logIn">
-                <div class="connect">Se connecter</div>
+            <?php
+            if (!isset($_SESSION['user_id'])) {
+            ?>
+                <a href=".\index.php?action=logIn">
+                    <div class="connect">Se connecter</div>
+                </a>
+                <a href=".\index.php?action=signIn">
+                    <div class="inscriptions">S'inscrire</div>
+                </a>
+            <?php
+            } else {
+            ?>
+                <a href=".\index.php?action=VuesUser">
+                    <div class="connect">Mon profil</div>
+                </a>
+                <a href=".\index.php?action=logIn">
+                    <div class="connect">Déconnexion</div>
+                </a>
+            <?php
+            }
+            ?>
 
-            </a>
-            <a href=".\index.php?action=signIn">
-                <div class="inscriptions">S'inscrire</div>
-            </a>
 
         </div>
         </label>
