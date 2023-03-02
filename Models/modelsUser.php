@@ -1,22 +1,20 @@
 <?php
 
-// require './vendor/autoload.php';
+require './vendor/autoload.php';
 
-// use Dotenv\Dotenv;
+use Dotenv\Dotenv;
 
-// $dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
-// $dotenv->load();
+$dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+$dotenv->load();
 
-// print_r($_ENV);
+require_once 'C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire\vendor/autoload.php';
 
-// require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv::createImmutable('C:/MAMP/htdocs/app_alimentation/Comportement_alimentaire/');
+$dotenv->load();
 
-// use Dotenv\Dotenv;
-
-// $dotenv = Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
-// print_r($_ENV);
+print_r($_ENV['DATABASE_URL']);
+print_r($_ENV['PASSWORD']);
+print_r($_ENV['USER']);
 
 
 $db_host = getenv('DATABASE_URL');
@@ -25,7 +23,7 @@ echo $db_host;
 function getBdd()
 {
     try {
-        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root', 'root');
+        $bdd = new PDO($_ENV['DATABASE_URL'] . '; dbname=alimentation_app; charset=utf8', $_ENV['PASSWORD'], $_ENV['USER']);
         return $bdd;
     } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());

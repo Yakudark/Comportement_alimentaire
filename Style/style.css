@@ -97,7 +97,20 @@ nav .breadcrumb__title {
     white-space: nowrap;
 }
 
+.section_user_2 {
+    margin-top: 130px;
+}
 
+.section_user_choice {
+    margin-top: 30px;
+}
+
+.heading-page, .home {
+    margin-bottom: 30px;
+}
+.home {
+    margin-bottom: 50px;
+}
 @media all and (max-width: 1000px) {
     nav .breadcrumb {
         height: 35px;

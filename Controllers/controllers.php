@@ -135,3 +135,9 @@ function VuesUser()
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
 }
+
+function getAllFoodFromCategory()
+{
+    $category = $_GET['category'];
+    getAllFoodFromOneCategory($category);
+}
