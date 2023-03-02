@@ -36,7 +36,7 @@ ob_start();
                             <input id="pw" class="input-area" placeholder="        Password" type="password" name="pwd">
                         </div>
                         <div class="btns">
-                            <input class="login-btn" type="submit" value="Log in" title="Log in" />
+                            <input class="login-btn py-2 px-4" type="submit" value="Log in" title="Log in" />
                             <p style="color:red" id="erreur"></p>
                             <!-- <a href="./inscription.html"><input class="btn-inscription" id="btn-inscrip" type="button" value="Register" title="Register" /></a>  -->
                         </div>

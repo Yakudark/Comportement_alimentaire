@@ -15,8 +15,12 @@ if (window.TESTING !== true) {
     let infoWeight = document.querySelector("#infoWeight");
     let infoSize = document.querySelector("#infoSize");
 
-    let infoWeightValue = infoWeight.textContent;
-    let infoSizeValue = infoSize.textContent;
+    let infoWeightValue;
+    let infoSizeValue
+    if (infoWeight && infoSize) {
+        infoWeightValue = infoWeight.textContent;
+        infoSizeValue = infoSize.textContent;
+    }
 
     let weightBtn = document.querySelector(".btn_weight");
     let heightBtn = document.querySelector(".btn_height");

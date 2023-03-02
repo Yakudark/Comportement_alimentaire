@@ -67,7 +67,9 @@ function validLogIn()
 
 function logOutUser()
 {
-    session_destroy();
+    if (isset($_SESSION)) {
+        session_destroy();
+    }
     require './Vues/VueAccueil.php';
 }
 
