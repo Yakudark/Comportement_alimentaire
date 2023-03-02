@@ -28,6 +28,11 @@ try {
         // if ($_GET['action'] == 'deleteClient') {
         //     deleteAClient();
         // } 
+
+        else if ($_GET['action'] == 'ClickedCategory'){
+            category();
+        }
+
         else
             throw new Exception("Action non valide");
     } else {

@@ -172,7 +172,7 @@ function checkEmail(email) {
     return "L'adresse email est valide.";
 }
 
-// Sign in mail
+// // Sign in mail
 
 function checkMail(createMail) {
     // Vérifie s'il y a un seul symbole "@"
@@ -224,3 +224,158 @@ function validateName(createName) {
 // console.log(validateFirstname("Yasmine")); // Renvoie "Le nom est valide."
 // console.log(validateFirstname("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
 // console.log(validateFirstname("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
+
+////////// RÉCAPITULATIF DE MENU ///////////
+
+
+// let legume = document.getElementById('#legume');
+// let legumeSec = document.getElementById('#legumeSec');
+// let feculent = document.getElementById('#feculent');
+// let viande = document.getElementById('#viande');
+// let oeuf = document.getElementById('#oeuf');
+// let poisson = document.getElementById('#poisson');
+// let fruitDeMer = document.getElementById('#fruitDeMer');
+
+// let list = "";
+
+// // legume
+// $('document').ready(function() {
+//   $('body').on('click', legume , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // legume sec
+// $('document').ready(function() {
+//   $('body').on('click', legumeSec , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // feculent
+// $('document').ready(function() {
+//   $('body').on('click', feculent , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // viande
+// $('document').ready(function() {
+//   $('body').on('click', viande , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // oeuf
+// $('document').ready(function() {
+//   $('body').on('click', oeuf , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // poisson
+// $('document').ready(function() {
+//   $('body').on('click', poisson, function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+// // fruit de mer
+// $('document').ready(function() {
+//   $('body').on('click', fruitDeMer , function() {
+//     var elementId = $(this).attr('id');
+//     $.ajax({
+//       url: 'controller.php',
+//       type: 'POST',
+//       data: { id: elementId },
+//       success: function(response) {
+//         // Traitement de la réponse du serveur
+//         list = response;
+//       },
+//       error: function() {
+//         // Traitement des erreurs
+//       }
+//     });
+//   });
+// });
+
+
+  
+
+  document.querySelectorAll('.category').addEventListener('click', function(e) {
+    e.preventDefault();
+    location.href = 'Controllers/controller.php?action=category';
+    document.querySelector('.list').innerHtml = location.href;
+  });

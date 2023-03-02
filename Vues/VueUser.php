@@ -122,66 +122,153 @@ $edit = false;
                                         <?php
                                         $categories1 = array("Légumes", "Légumes secs", "Féculents", "Viandes", "Oeufs", "Poissons", "Fruits de mer");
 
-                                        foreach ($categories1 as $index => $category1) {
-                                            $id = "category-" . $index;
-                                            echo '<div class="hexagon-item">
-                                    <div class="hex-item">
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                <div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="bi bi-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="legume">Légumes</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
-                                    <div class="hex-item">
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="bi bi-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="legumeSec">Légumes secs</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
-                                    <label class="hex-content" for="' . $id . '">
-                                    <span class="hex-content-inner">
-                                        <span id="' . $id . '" class="title">' . $category1 . '</span>
-                                    </span>
-                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    <input type="radio" name="category" id="' . $id . '" value="' . $category1 . '">
-                                </label>
-                                </div>';
-                                        }
-                                        ?>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="feculent">Féculents</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="container_choice2">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-
-                                    <div class="hexagon-menu clear">
-                                        <?php
-                                        $categories2 = array("Produits laitiers", "fruits", "fruits secs et oléagineux", "produits sucrés", "corps gras", "boissons", "boissons alcoolisées");
-
-                                        foreach ($categories2 as $index => $category2) {
-                                            $id = "category-" . $index;
-                                            echo '<div class="hexagon-item">
-                                    <div class="hex-item">
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="viande">Viandes</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
-                                    <div class="hex-item">
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="oeuf">Oeufs</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
-                                    <label class="hex-content" for="' . $id . '">
-                                    <span class="hex-content-inner">
-                                        <span id="' . $id . '" class="title">' . $category2 . '</span>
-                                    </span>
-                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    <input type="radio" name="category" id="' . $id . '" value="' . $category2 . '">
-                                </label>
-                                </div>';
-                                        }
-                                        ?>
-
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="poisson">Poissons</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title" id="fruitDeMer">Fruits de mer</span>
+                                            </span>
+                                            <img class="hexa" src="./Asset/Hexagone.png" alt="Image d'un hexagone">
+                                        </a>
                                     </div>
 
                                 </div>
@@ -191,6 +278,21 @@ $edit = false;
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="section_user_2_droite">
+
+    </div>
+
+</section>
+<section class="section_user_3">
+
+</section>
+
+
+<!-- 
+    <a href="#" onclick="event.preventDefault(); location.href='Controllers/controller.php?action=category';">Cliquez ici</a>
+ -->
 
 
             <?php $contenu = ob_get_clean(); ?>

@@ -1,8 +1,8 @@
 <?php
 require('././Models/modelsUser.php');
+// require('././Models/modelsFood.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-// require('././Models/modelsFood.php');
 // require('././Models/modelsDate.php');
 
 // Affiche la liste de tous les employés de l'entreprise
@@ -135,3 +135,10 @@ function VuesUser()
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
 }
+
+
+// Afficher la liste d'un ingrédient
+
+// function getOneFoodType(){
+//     require './Vues/VueUser.php';
+// }
