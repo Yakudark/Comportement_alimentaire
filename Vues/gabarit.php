@@ -38,7 +38,9 @@ if (isset($_SESSION['user_id'])) {
 
         <div class="navbar">
             <div class="logo">
-                <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
+                <a href="index.php">
+                    <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
+                </a>
             </div>
             <nav>
 
