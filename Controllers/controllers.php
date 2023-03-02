@@ -139,5 +139,5 @@ function VuesUser()
 function getAllFoodFromCategory()
 {
     $category = $_GET['category'];
-    getAllFoodFromOneCategory($category);
+    $list = getAllFoodFromOneCategory($category);
 }
