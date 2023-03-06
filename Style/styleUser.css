@@ -387,7 +387,6 @@ form {
     transform: translate(-50%, -50%);
 }
 
-
 .hex-content .title {
     display: block;
     font-size: 14px;
@@ -398,7 +397,6 @@ form {
     background-color: green;
     border-radius: 20px;
     padding: 10px;
-
 }
 
 .hex-content:hover .title {
@@ -506,4 +504,33 @@ form {
         transform: rotate(30deg) translate(0px, 0px);
     }
 
+}
+
+/*Formulaire ajout aliment*/
+.list {
+    width: 50%;
+    margin: 50px auto 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: rgb(229, 26, 152);
+}
+
+.list input,
+.list select {
+    margin: 20px auto !important;
+    padding: 5px;
+    width: 60%;
+}
+
+#chooseFood {
+    padding-bottom: 50px;
+}
+
+#chooseFood input[type='submit'] {
+    background: white;
+    width: 100px !important;
+    border-radius: 5px;
 }

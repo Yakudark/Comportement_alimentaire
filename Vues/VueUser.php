@@ -71,7 +71,7 @@ $edit = false;
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
 
         <!-- FORMULAIRE ------------------------------------------------->
-        <form action="<?= ".\index.php?action=addNewDate" ?>" method="post">
+        <form action="<?= ".\index.php?action=addNewDate" ?>" method="post" id="chooseFood">
             <h2 class="first"><span class="fancy">Première étape </span>: Veuillez choisir votre moment de la journée </h2>
             <div class="section_user_choice">
 
@@ -191,6 +191,7 @@ $edit = false;
                     </div>
                 </div>
             </div>
+            <h2 class="first"><span class="fancy">Troisième étape </span>: Veuillez choisir votre aliment </h2>
             <div class='list'>
                 <select name="list" id="listAliment">
                     <option>Choisissez votre aliment</option>
