@@ -113,7 +113,7 @@ $edit = false;
                             <div class="row">
                                 <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                                     <div class="page-title  home text-center">
-                                        <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : Veuillez choisir votre famille d'aliments
+                                        <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : veuillez choisir votre famille d'aliments
                                         </h2>
                                         <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Envirionnement et du Travail sous tutelle du ministère de la santé)</p>
                                     </div>
@@ -191,7 +191,6 @@ $edit = false;
                     </div>
                 </div>
             </div>
-
 
             <?php $contenu = ob_get_clean(); ?>
 

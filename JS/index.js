@@ -100,13 +100,27 @@ if (window.TESTING !== true) {
     getImageImc();
 }
 
-
 //--------------------------Input pour le choix de la famille d'aliment--------------------//
 
 // Récupère tous les éléments .hexagon-item
 var hexagonItems = document.querySelectorAll('.hexagon-item');
+console.log(hexagonItems);
 
 // Boucle sur chaque élément .hexagon-item
+hexagonItems.forEach(function (hexagonItem) {
+    // Récupère l'input radio associé
+    var radioInput = hexagonItem.querySelector('input[type="radio"]');
+    // Ajoute un écouteur d'événements sur le clic de l'élément .hexagon-item
+    hexagonItem.addEventListener('click', function () {
+        // Désactive le style des autres éléments
+        hexagonItems.forEach(function (item) {
+            item.classList.remove('selected');
+        });
+        // Active le style sur l'élément cliqué
+        hexagonItem.classList.add('selected');
+        // Sélectionne l'input radio associé
+        radioInput.checked = true;
+    });
 hexagonItems.forEach(function (hexagonItem) {
     // Récupère l'input radio associé
     var radioInput = hexagonItem.querySelector('input[type="radio"]');
