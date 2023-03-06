@@ -71,33 +71,33 @@ $edit = false;
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
 
         <!-- FORMULAIRE ------------------------------------------------->
-        <form action="post">
+        <form action="<?= ".\index.php?action=addNewDate" ?>" method="post">
             <h2 class="first"><span class="fancy">Première étape </span>: Veuillez choisir votre moment de la journée </h2>
             <div class="section_user_choice">
 
                 <div class="buttons">
                     <label class="pdj">
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="Petit déjeuner">
                         <span></span>
                         <i class="bi bi-cup-hot-fill"></i>
                     </label>
                     <label class="encas">
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="Encas">
                         <span></span>
                         <i class="bi bi-egg-fried"></i>
                     </label>
                     <label class="dejeuner">
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="Déjeuner">
                         <span></span>
                         <i class="bi bi-brightness-high-fill"></i>
                     </label>
                     <label class="gouter">
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="Goûter">
                         <span></span>
                         <i class="bi bi-apple"></i>
                     </label>
                     <label class="diner">
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="Dîner">
                         <span></span>
                         <i class="bi bi-moon-stars-fill"></i>
                     </label>
@@ -196,7 +196,7 @@ $edit = false;
                     <option>Choisissez votre aliment</option>
                 </select>
                 <input type="date" id="mealDate" name="mealDate">
-                <input type="text" id="mealQuantity" name="mealQuantity">
+                <input type="text" id="mealQuantity" name="mealQuantity" placeholder="Quantité en grammes">
                 <input type="submit" id="submitMeal" name="submitMeal" value="Valider">
             </div>
 
