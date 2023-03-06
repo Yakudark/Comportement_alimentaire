@@ -120,7 +120,7 @@ $edit = false;
                             <div class="row">
                                 <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                                     <div class="page-title  home text-center">
-                                        <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : Veuillez choisir votre famille d'aliments
+                                        <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : veuillez choisir votre famille d'aliments
                                         </h2>
                                         <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Envirionnement et du Travail sous tutelle du ministère de la santé)</p>
                                     </div>
@@ -129,7 +129,8 @@ $edit = false;
                                         <?php
                                         $categories1 = array("Légumes", "Légumes secs", "Féculents", "Viandes", "Oeufs", "Poissons", "Fruits de mer");
 
-                                        foreach ($categories1 as $category1) {
+                                        foreach ($categories1 as $index => $category1) {
+                                            $id = "category-" . $index;
                                             echo '<div class="hexagon-item">
                                     <div class="hex-item">
                                         <div></div>
@@ -141,12 +142,13 @@ $edit = false;
                                         <div></div>
                                         <div></div>
                                     </div>
-                                    <a class="hex-content">
-                                        <span class="hex-content-inner">
-                                            <span id=".$category1." class="title">' . $category1 . '</span>
-                                        </span>
-                                        <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    </a>
+                                    <label class="hex-content" for="' . $id . '">
+                                    <span class="hex-content-inner">
+                                        <span id="' . $id . '" class="title">' . $category1 . '</span>
+                                    </span>
+                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category1 . '">
+                                </label>
                                 </div>';
                                         }
                                         ?>
@@ -163,7 +165,8 @@ $edit = false;
                                         <?php
                                         $categories2 = array("Produits laitiers", "fruits", "fruits secs et oléagineux", "produits sucrés", "corps gras", "boissons", "boissons alcoolisées");
 
-                                        foreach ($categories2 as $category2) {
+                                        foreach ($categories2 as $index => $category2) {
+                                            $id = "category-" . $index;
                                             echo '<div class="hexagon-item">
                                     <div class="hex-item">
                                         <div></div>
@@ -175,12 +178,13 @@ $edit = false;
                                         <div></div>
                                         <div></div>
                                     </div>
-                                    <a class="hex-content">
-                                        <span class="hex-content-inner">
-                                            <span id=".$category2." class="title">' . $category2 . '</span>
-                                        </span>
-                                        <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    </a>
+                                    <label class="hex-content" for="' . $id . '">
+                                    <span class="hex-content-inner">
+                                        <span id="' . $id . '" class="title">' . $category2 . '</span>
+                                    </span>
+                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category2 . '">
+                                </label>
                                 </div>';
                                         }
                                         ?>
@@ -194,7 +198,6 @@ $edit = false;
                     </div>
                 </div>
             </div>
-
 
             <?php $contenu = ob_get_clean(); ?>
 
