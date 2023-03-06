@@ -79,25 +79,27 @@ if (window.TESTING !== true) {
         IMCContent.innerHTML = "";
     }
 
-let imcImage = document.querySelector("#IMCImage");
-console.log("imcImage");
-let imc = IMCContent.textContent;
-imc = parseFloat(imc);
-function getImageImc() {
-    console.log(imc);
-    if (imc < 18.5) {
-        imcImage.src = "./Asset/souspoids.png";
-    } else if (imc >= 18.5 && imc < 24.9) {
-        imcImage.src = "./Asset/Normal.png";
-    } else if (imc >= 25 && imc < 29.9) {
-        imcImage.src = "./Asset/surpoids.png";
-    } else if (imc >= 30 && imc < 34.9) {
-        imcImage.src = "./Asset/Obésité.png";
-    } else if (imc >= 35) {
-        imcImage.src = "./Asset/obésité_sévère.png";
+    let imcImage = document.querySelector("#IMCImage");
+    console.log("imcImage");
+    let imc = IMCContent.textContent;
+    imc = parseFloat(imc);
+    function getImageImc() {
+        console.log(imc);
+        if (imc < 18.5) {
+            imcImage.src = "./Asset/souspoids.png";
+        } else if (imc >= 18.5 && imc < 24.9) {
+            imcImage.src = "./Asset/Normal.png";
+        } else if (imc >= 25 && imc < 29.9) {
+            imcImage.src = "./Asset/surpoids.png";
+        } else if (imc >= 30 && imc < 34.9) {
+            imcImage.src = "./Asset/Obésité.png";
+        } else if (imc >= 35) {
+            imcImage.src = "./Asset/obésité_sévère.png";
+        }
     }
+    getImageImc();
 }
-getImageImc();
+
 
 //--------------------------Input pour le choix de la famille d'aliment--------------------//
 
