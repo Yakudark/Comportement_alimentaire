@@ -170,4 +170,5 @@ function kcalPerQuantity(quantity, kcalPer100g) {
     let kcal = (quantity * kcalPer100g) / 100;
     return kcal;
 }
+
 module.exports = getIMC;
