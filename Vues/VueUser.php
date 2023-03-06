@@ -15,13 +15,6 @@ $edit = false;
             <div class="nameUser">
 
             </div>
-            <div class="container__text__star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-            </div>
             <p>
                 Voici le récapitulatif de vos données
             </p>

@@ -1,8 +1,12 @@
 .testimony {
-    background-image: url(./Asset/dietUser.png);
+    background-image: url(../Asset/dietUser.png);
+    background-size: cover;
 }
 .testimony h2 {
     text-align: center;
+    font-weight: 500;
+    font-family: cursive;
+    color: white;
 }
 .testimony_container {
     max-width: 1044px;
@@ -14,6 +18,11 @@
     text-align: left;
     position: relative;
     margin-bottom: 22px;
+    backdrop-filter: blur(20px);
+    border:1px solid #fff;
+    box-shadow: 10px 10px 10px #ffffff6a;
+    padding-bottom: 20px;
+    border-radius: 20px;
 }
 .carousel > input {
     clip: rect(1px, 1px, 1px, 1px);
@@ -45,21 +54,27 @@
 }
 .carousel > input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel > input:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel > input:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel > input:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel > input:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel > input:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) {
     box-shadow: 0px 0px 0px 5px rgba(0, 0, 255, 0.5);
+    border-radius: 20px;
 }
 .carousel__slides {
     position: relative;
@@ -116,6 +131,7 @@
     flex: 0 0 auto;
     width: 25%;
     min-width: 150px;
+    color: white;
 }
 .carousel__slide .credit {
     margin-top: 1rem;

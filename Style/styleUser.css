@@ -90,13 +90,11 @@ form {
     background-image: url(../Asset/diet.png);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .section_user {
     display: flex;
     justify-content: center;
-
 }
 
 .first {
@@ -302,7 +300,10 @@ form {
     background-color: pink;
     color: green;
     font-size: 18px;
+    transform: scale(0.97);
 }
+
+
 
 .hexagon-item input {
     display: none;

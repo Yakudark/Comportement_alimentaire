@@ -4,12 +4,17 @@ require './vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+// $dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+$dotenv = Dotenv::createImmutable(dirname(dirname(__DIR__)) . '/Comportement_alimentaire');
+
 $dotenv->load();
 
-require_once 'C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire\vendor/autoload.php';
+// require_once 'C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire\vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv::createImmutable('C:/MAMP/htdocs/app_alimentation/Comportement_alimentaire/');
+// $dotenv = Dotenv::createImmutable('C:/MAMP/htdocs/app_alimentation/Comportement_alimentaire/');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+
 $dotenv->load();
 
 $db_host = getenv('DATABASE_URL');

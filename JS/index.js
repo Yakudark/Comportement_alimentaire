@@ -105,6 +105,7 @@ if (window.TESTING !== true) {
 // Récupère tous les éléments .hexagon-item
 var hexagonItems = document.querySelectorAll('.hexagon-item');
 console.log(hexagonItems);
+
 // Boucle sur chaque élément .hexagon-item
 hexagonItems.forEach(function (hexagonItem) {
     // Récupère l'input radio associé
