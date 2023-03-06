@@ -78,20 +78,26 @@
     font-size: 1.2rem;
 }
 
-
+form {
+    background-image: url(../Asset/diet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 .section_user {
     display: flex;
     justify-content: center;
+    
 }
 .first {
     text-align: center;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 .section_user_choice {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 .section_user_choice .buttons {
 display: flex;
@@ -254,6 +260,17 @@ text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
 .hexagon-item:hover .hex-content img {
     transform: scale(0.97); }
     
+.hexagon-item.selected .hex-content .title {
+ background-color: pink;
+ color: green;
+  font-size: 18px;
+}
+
+.hexagon-item input {
+    display: none;
+}
+
+
 .hex-item {
     position: absolute;
     top: 0;

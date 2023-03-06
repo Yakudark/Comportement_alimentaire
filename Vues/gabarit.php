@@ -45,6 +45,9 @@ if (isset($_SESSION['user_id'])) {
             <nav>
 
                 <ul class="breadcrumb">
+                    <li class="home">
+                        <a href="#" i class="bi bi-house-fill"></i></a>
+                    </li>
                     <li class="breadcrumb__item breadcrumb__item-firstChild">
                         <a href="index.php?action=VuesUser"><span class="breadcrumb__title">Perdre du poids</span></a>
                     </li>

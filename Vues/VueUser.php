@@ -15,13 +15,6 @@ $edit = false;
             <div class="nameUser">
 
             </div>
-            <div class="container__text__star">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-            </div>
             <p>
                 Voici le récapitulatif de vos données
             </p>
@@ -129,7 +122,8 @@ $edit = false;
                                         <?php
                                         $categories1 = array("Légumes", "Légumes secs", "Féculents", "Viandes", "Oeufs", "Poissons", "Fruits de mer");
 
-                                        foreach ($categories1 as $category1) {
+                                        foreach ($categories1 as $index => $category1) {
+                                            $id = "category-" . $index;
                                             echo '<div class="hexagon-item">
                                     <div class="hex-item">
                                         <div></div>
@@ -141,12 +135,13 @@ $edit = false;
                                         <div></div>
                                         <div></div>
                                     </div>
-                                    <a class="hex-content">
-                                        <span class="hex-content-inner">
-                                            <span id=".$category1." class="title">' . $category1 . '</span>
-                                        </span>
-                                        <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    </a>
+                                    <label class="hex-content" for="' . $id . '">
+                                    <span class="hex-content-inner">
+                                        <span id="' . $id . '" class="title">' . $category1 . '</span>
+                                    </span>
+                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category1 . '">
+                                </label>
                                 </div>';
                                         }
                                         ?>
@@ -163,7 +158,8 @@ $edit = false;
                                         <?php
                                         $categories2 = array("Produits laitiers", "fruits", "fruits secs et oléagineux", "produits sucrés", "corps gras", "boissons", "boissons alcoolisées");
 
-                                        foreach ($categories2 as $category2) {
+                                        foreach ($categories2 as $index => $category2) {
+                                            $id = "category-" . $index;
                                             echo '<div class="hexagon-item">
                                     <div class="hex-item">
                                         <div></div>
@@ -175,12 +171,13 @@ $edit = false;
                                         <div></div>
                                         <div></div>
                                     </div>
-                                    <a class="hex-content">
-                                        <span class="hex-content-inner">
-                                            <span id=".$category2." class="title">' . $category2 . '</span>
-                                        </span>
-                                        <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    </a>
+                                    <label class="hex-content" for="' . $id . '">
+                                    <span class="hex-content-inner">
+                                        <span id="' . $id . '" class="title">' . $category2 . '</span>
+                                    </span>
+                                    <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category2 . '">
+                                </label>
                                 </div>';
                                         }
                                         ?>
