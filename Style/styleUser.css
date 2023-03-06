@@ -78,7 +78,7 @@
     font-size: 1.2rem;
 }
 
-form {
+.form-choice {
     background-image: url(../Asset/diet.png);
     background-size: cover;
     background-repeat: no-repeat;

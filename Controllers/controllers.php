@@ -135,3 +135,9 @@ function VuesUser()
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
 }
+
+function VuesRecette()
+{
+    session_start();
+    require './Vues/VueRecette.php';
+}

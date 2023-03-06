@@ -71,7 +71,7 @@ $edit = false;
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
 
         <!-- FORMULAIRE ------------------------------------------------->
-        <form action="">
+        <form class="form-choice"  action="">
             <h2 class="first"><span class="fancy">Première étape </span>: Veuillez choisir votre moment de la journée </h2>
             <div class="section_user_choice">
 

@@ -5,8 +5,35 @@ ob_start();
 
 
 <section class="testimony">
-    <h2>Témoignages</h2>
+    <div class="testimony-explanation">
+        <h3>Réussir avec ScaleIn</h3>
+        <div class="eatanddrink">
+            <img src="./Asset/eau.png" alt="bouteille d'eau">
+            <p>Buvez au minimum 2 litres par jour, de l'eau principalement mais aussi du café noir(sans sucre), du thé, des infusions. Répartissez votre hydratation au fil de la journée et commencez chaque repas par un grand verre d'eau.</p>
+        </div>
+        <div class="eatanddrink">
+            <p>Évitez ou réduisez fortement votre consommation de boissons alcoolisées</p>
+            <img src="./Asset/chope-a-biere.png" alt="alcool">
+        </div>
+        <div class="eatanddrink">
+            <img src="./Asset/cup-cake.png" alt="produits sucrés">
+            <p>Évitez le sucre et dérivés (les édulcorants sont préférables) ainsi que les sucreries, gâteaux, biscuits et desserts.</p>
+        </div>
+        <div class="eatanddrink">
+            <p>Préparez vos menus à l'avance.</p>
+            <img src="./Asset/panier.png" alt="panier de course">
+        </div>
+        <div class="eatanddrink">
+            <img src="./Asset/diner.png" alt="repas">
+            <p>Le contexte du repas est aussi important que le repas lui-même : asseyez-vous à table et éloignez-vous de l'ordinateur et de la télé.</p>
+        </div>
+        <div class="eatanddrink">
+            <p>Ne sautez pas de repas et ne restez pas plus de 5 heures sans manger : un en-cas à 10h et un goûter à 16h empêchent les grignotages intempestifs juste avant le déjeuner et le dîner.</p>
+            <img src="./Asset/commenter.png" alt="ne pas suater de repas">
+        </div>
+    </div>
     <div class="testimony_container">
+        <h2>Témoignages</h2>
         <div class="carousel">
             <input type="radio" name="slides" checked="checked" id="slide-1">
             <input type="radio" name="slides" id="slide-2">
@@ -105,16 +132,34 @@ ob_start();
         </div>
     </div>
 </section>
-<section class="imc">
-    <h2>Calculez votre IMC </h2>
-    <div class="left-container">
+<section class="imc-content">
 
+    <div class="imc-left-container">
+        <h2>Calculez votre IMC </h2>
+        <div class="IMCOMS">
+            <img src="./Asset/Imc ONS.jpg" alt="I.M.C selon l'O.M.S">
+        </div>
     </div>
-    <div class="right-container">
-
-    </div>
+    <div class="imc-right-container">
+        <div class="range-container">
+            <div>
+                <h2>Saisissez votre poids</h2>
+                <span id="rangeValue">70</span><span id="rangeUnit"> kg</span><br>
+                <input class="range" type="range" name="" value="70" min="0" max="350" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)">
+            </div>
+            <div>
+                <h2>Saisissez votre taille</h2>
+                <span id="secondRangeValue">170</span><span id="secondRangeUnit"> cm</span><br>
+                <input class="range" type="range" name="" value="170" min="0" max="290" onChange="rangeSlide2(this.value)" onmousemove="rangeSlide2(this.value)">
+            </div>
+            <div>
+                <h2>Voici votre indice de masse corporelle :</h2>
+                <span id="imcValue">0</span><br>
+                <h2>Votre catégorie d'IMC :</h2>
+                <span id="imcCategory"></span>
+            </div>
+        </div>
 </section>
-
 
 
 <?php $contenu = ob_get_clean(); ?>
