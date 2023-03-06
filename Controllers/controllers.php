@@ -67,7 +67,9 @@ function validLogIn()
 
 function logOutUser()
 {
-    session_destroy();
+    if (isset($_SESSION)) {
+        session_destroy();
+    }
     require './Vues/VueAccueil.php';
 }
 
@@ -134,4 +136,10 @@ function VuesUser()
     session_start();
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueUser.php';
+}
+
+function getAllFoodFromCategory()
+{
+    $category = $_GET['category'];
+    $list = getAllFoodFromOneCategory($category);
 }
