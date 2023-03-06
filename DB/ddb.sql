@@ -23,6 +23,7 @@ CREATE TABLE eaten_date(
     id_user INT NOT NULL,
     id_food INT NOT NULL,
     date_of_eaten VARCHAR(30) NOT NULL,
+    quantity VARCHAR(30) NOT NULL,
     PRIMARY KEY (id_user, id_food),
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (id_food) REFERENCES food(id) ON DELETE CASCADE

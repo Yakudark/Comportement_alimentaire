@@ -1,5 +1,5 @@
 <?php
-require('./Models/modelsUser.php');
+// require('./Models/modelsUser.php');
 
 
 function getAllFood()
@@ -27,6 +27,6 @@ function getAllFoodFromOneCategory($category)
     $query = $bdd->prepare("SELECT * FROM food WHERE category = :category");
     $query->bindParam(':category', $category);
     $query->execute();
-    $food = $query->fetch();
+    $food = $query->fetchAll();
     return $food;
 }

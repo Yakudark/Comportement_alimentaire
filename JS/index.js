@@ -104,7 +104,6 @@ if (window.TESTING !== true) {
 
 // Récupère tous les éléments .hexagon-item
 var hexagonItems = document.querySelectorAll('.hexagon-item');
-console.log(hexagonItems);
 
 // Boucle sur chaque élément .hexagon-item
 hexagonItems.forEach(function (hexagonItem) {
@@ -137,6 +136,55 @@ hexagonItems.forEach(function (hexagonItem) {
         });
     });
 });
+
+//Récupérer le nom des catégories
+let listAliment = document.querySelector("#listAliment");
+for (let i = 0; i < hexagonItems.length; i++) {
+    hexagonItems[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        let radioInput = hexagonItems[i].querySelector('input[type="radio"]');
+        let category = radioInput.value.toLowerCase();
+        category = category.toLowerCase();
+
+        fetch('Controllers/controllers.php?action=getAllFoodFromCategory', {
+            method: 'POST',
+            body: JSON.stringify({ category: category }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            cache: 'no-cache'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(text => {
+                console.log('Response from server:', text);
+                try {
+                    const data = JSON.parse(text);
+                    console.log('JSON data from server:', data);
+                    listAliment.innerHTML = `<option>Choisissez votre aliment</option>`
+                    for (let i = 0; i < data.length; i++) {
+                        listAliment.innerHTML += `<option value=${data[i].name_food}>${data[i].name_food}</option>`
+                    }
+                } catch (err) {
+                    console.error('Error parsing JSON data:', err);
+                }
+            })
+            .catch(error => {
+                console.error('Error in fetch request:', error);
+            });
+
+    })
+}
+
+//Fonction de calcul des kcal en fonction de la quantité
+function kcalPerQuantity(quantity, kcalPer100g) {
+    let kcal = (quantity * kcalPer100g) / 100;
+    return kcal;
+}
 // ---------Calcul IMC balance Vue Accueil--------------//
 function rangeSlide1(value) {
     document.getElementById('rangeValue').innerHTML = value;

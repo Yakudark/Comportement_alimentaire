@@ -22,6 +22,8 @@ try {
             updateSize();
         } else if ($_GET['action'] == 'deconnection') {
             logOutUser();
+        } else if ($_GET['action'] == 'category') {
+            getAllFoodFromCategory();
         } else if ($_GET['action'] == 'VuesRecette') {
             VuesRecette();
         }
