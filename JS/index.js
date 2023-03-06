@@ -117,43 +117,18 @@ let createFirstname = document.getElementById('#prenom');
 let createMail = document.getElementById('#email');
 let createPw = document.getElementById('#motdepasse');
 
-// Log in Password
 
-function checkPassword(password) {
-        // Vérifie la longueur
-    if (password.length < 8) {
-      return "Le mot de passe doit contenir au moins 8 caractères.";
-    }
-        // Vérifie si il y a une lettre minuscule et une majuscule
-    if (!password.match(/[a-z]/) || !password.match(/[A-Z]/)) {
-      return "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule.";
-    }
-        // Vérifie si il y a au moins un chiffre
-    if (!password.match(/\d/)) {
-      return "Le mot de passe doit contenir au moins un chiffre.";
-    }
-  
-    return "Le mot de passe est valide.";
-  }
+// Password
 
-// Sign in Password
+let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
-function checkPw(createPw) {
-        // Vérifie la longueur
-    if (createPw.length < 8) {
-      return "Le mot de passe doit contenir au moins 8 caractères.";
-    }
-        // Vérifie si il y a une lettre minuscule et une majuscule
-    if (!createPw.match(/[a-z]/) || !createPw.match(/[A-Z]/)) {
-      return "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule.";
-    }
-        // Vérifie si il y a au moins un chiffre
-    if (!createPw.match(/\d/)) {
-      return "Le mot de passe doit contenir au moins un chiffre.";
-    }
-  
-    return "Le mot de passe est valide.";
-  }
+if(!PWD_REGEX.test(createPw.value)){
+  alert("Votre mot de passe n'est pas valide.")
+};
+
+if(!PWD_REGEX.test(pw.value)){
+  alert("Votre mot de passe n'est pas valide.")
+}
 
 // Exemple d'utilisation pour les tests :
 // console.log(checkPassword("Abcd1234")); // Renvoie "Le mot de passe est valide."
@@ -162,214 +137,55 @@ function checkPw(createPw) {
 // console.log(checkPassword("abcdefgh")); // Renvoie "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule."
 // console.log(checkPassword("12345678")); // Renvoie "Le mot de passe doit contenir au moins une lettre majuscule et une lettre minuscule."
 
-// Log in mail
+// Mail
 
-function checkEmail(email) {
-    // Vérifie s'il y a un seul symbole "@"
-    if (email.indexOf("@") === -1 || email.indexOf("@") !== email.lastIndexOf("@")) {
-      return "L'adresse email doit contenir un seul symbole '@'.";
-    }
-    return "L'adresse email est valide.";
-}
+function ValidateEmail(email) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
+  {
+    return (true)
+  }
+    alert("Votre adresse mail n'est pas valide.")
+    return (false)
+};
 
-// // Sign in mail
+function ValidateEmail(createMail);
 
-function checkMail(createMail) {
-    // Vérifie s'il y a un seul symbole "@"
-    if (createMail.indexOf("@") === -1 || createMail.indexOf("@") !== createMail.lastIndexOf("@")) {
-      return "L'adresse email doit contenir un seul symbole '@'.";
-    }
-    return "L'adresse email est valide.";
-}
-  // Exemple d'utilisation pour les tests :
-// console.log(checkEmail("johndoe@example.com")); // Renvoie "L'adresse email est valide."
-// console.log(checkEmail("johndoeexample.com")); // Renvoie "L'adresse email doit contenir un seul symbole '@'."
+// Email valide
 
+// mysite@ourearth.com
+// my.ownsite@ourearth.org
+// mysite@you.me.net
+
+// Email invalide
+
+// mysite.ourearth.com [@ is not present] 
+// mysite@.com.my [ tld (Top Level domain) can not start with dot "." ]
+// @you.me.net [ No character before @ ]
+// mysite123@gmail.b [ ".b" is not a valid tld ]
+// mysite@.org.org [ tld can not start with dot "." ]
+// .mysite@mysite.org [ an email should not be start with "." ]
+// mysite()*@gmail.com [ here the regular expression only allows character, digit, underscore, and dash ]
+// mysite..1234@yahoo.com [double dots are not allowed]
 
 function validateName(createName) {
     // Vérifie que le nom contient uniquement des lettres et des espaces
-    const regex = /^[a-zA-Z\s]*$/;
-    if (!regex.test(createName)) {
+    const regex = /^[a-zA-Z\s].{2,30}*$/;
+    if (!regex.test(createName.value)) {
+      alert("Votre nom n'est pas valide.")
       return false;
     }
-  
-    // Vérifie que le nom a une longueur comprise entre 2 et 50 caractères
-    if (createName.length < 2 || createName.length > 50) {
-      return false;
-    }
-  
-    return true;
   }
+  function validateName(createFirstname);
+  
     // Exemple d'utilisation pour les tests :
 // console.log(validateName("Yasmine")); // Renvoie "Le nom est valide."
 // console.log(validateName("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
 // console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
   
-  function validateFirstname(createFirstname) {
-    // Vérifie que le nom contient uniquement des lettres et des espaces
-    const regex = /^[a-zA-Z\s]*$/;
-    if (!regex.test(createFirstname)) {
-      return false;
-    }
-  
-    // Vérifie que le nom a une longueur comprise entre 2 et 50 caractères
-    if (createFirstname.length < 2 || createFirstname.length > 50) {
-      return false;
-    }
-  
-    return true;
-  }
 
-      // Exemple d'utilisation pour les tests :
-// console.log(validateFirstname("Yasmine")); // Renvoie "Le nom est valide."
-// console.log(validateFirstname("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
-// console.log(validateFirstname("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
 
 ////////// RÉCAPITULATIF DE MENU ///////////
-
-
-// let legume = document.getElementById('#legume');
-// let legumeSec = document.getElementById('#legumeSec');
-// let feculent = document.getElementById('#feculent');
-// let viande = document.getElementById('#viande');
-// let oeuf = document.getElementById('#oeuf');
-// let poisson = document.getElementById('#poisson');
-// let fruitDeMer = document.getElementById('#fruitDeMer');
-
-// let list = "";
-
-// // legume
-// $('document').ready(function() {
-//   $('body').on('click', legume , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // legume sec
-// $('document').ready(function() {
-//   $('body').on('click', legumeSec , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // feculent
-// $('document').ready(function() {
-//   $('body').on('click', feculent , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // viande
-// $('document').ready(function() {
-//   $('body').on('click', viande , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // oeuf
-// $('document').ready(function() {
-//   $('body').on('click', oeuf , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // poisson
-// $('document').ready(function() {
-//   $('body').on('click', poisson, function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
-
-// // fruit de mer
-// $('document').ready(function() {
-//   $('body').on('click', fruitDeMer , function() {
-//     var elementId = $(this).attr('id');
-//     $.ajax({
-//       url: 'controller.php',
-//       type: 'POST',
-//       data: { id: elementId },
-//       success: function(response) {
-//         // Traitement de la réponse du serveur
-//         list = response;
-//       },
-//       error: function() {
-//         // Traitement des erreurs
-//       }
-//     });
-//   });
-// });
 
 // avec l'action 
 
