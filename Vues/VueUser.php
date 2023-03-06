@@ -71,7 +71,7 @@ $edit = false;
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
 
         <!-- FORMULAIRE ------------------------------------------------->
-        <form action="">
+        <form action="post">
             <h2 class="first"><span class="fancy">Première étape </span>: Veuillez choisir votre moment de la journée </h2>
             <div class="section_user_choice">
 
@@ -191,7 +191,16 @@ $edit = false;
                     </div>
                 </div>
             </div>
+            <div class='list'>
+                <select name="list" id="listAliment">
+                    <option>Choisissez votre aliment</option>
+                </select>
+                <input type="date" id="mealDate" name="mealDate">
+                <input type="text" id="mealQuantity" name="mealQuantity">
+                <input type="submit" id="submitMeal" name="submitMeal" value="Valider">
+            </div>
 
-            <?php $contenu = ob_get_clean(); ?>
+        </form>
+        <?php $contenu = ob_get_clean(); ?>
 
-            <?php require 'gabarit.php'; ?>
+        <?php require 'gabarit.php'; ?>

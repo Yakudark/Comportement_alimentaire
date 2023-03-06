@@ -1,9 +1,13 @@
 <?php
-require('././Models/modelsUser.php');
+require(__DIR__ . '/../Models/modelsUser.php');
+require(__DIR__ . '/../Models/modelsFood.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // require('././Models/modelsFood.php');
 // require('././Models/modelsDate.php');
+if ($_GET['action'] === 'getAllFoodFromCategory') {
+    getAllFoodFromCategory();
+}
 
 // Affiche la liste de tous les employés de l'entreprise
 function accueil()
@@ -140,6 +144,25 @@ function VuesUser()
 
 function getAllFoodFromCategory()
 {
-    $category = $_GET['category'];
-    $list = getAllFoodFromOneCategory($category);
+    $json_data = file_get_contents('php://input');
+    $data = json_decode($json_data, true);
+
+    if (isset($data['category'])) {
+        $category = $data['category'];
+        $list = getAllFoodFromOneCategory($category);
+        // $name_food = [];
+        // foreach ($list as $aliment) {
+        //     array_push($name_food, $aliment['name_food']);
+        // }
+        // $json_data = json_encode($name_food);
+        // echo $json_data;
+
+        $json_data = json_encode($list);
+        echo $json_data;
+
+
+        // echo json_encode($data['category']);
+    } else {
+        echo "Category is not set";
+    }
 }
