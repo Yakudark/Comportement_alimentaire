@@ -69,9 +69,13 @@ $edit = false;
 <section class="section_user_2">
     <div class="section_user_2_gauche">
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
+        <h3>Vous avez consommé :</h3>
+        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped" style="width: 50%"></div>
+        </div>
 
         <!-- FORMULAIRE ------------------------------------------------->
-        <form class="form-choice"  action="">
+        <form class="form-choice" action="">
             <h2 class="first"><span class="fancy">Première étape </span>: Veuillez choisir votre moment de la journée </h2>
             <div class="section_user_choice">
 

@@ -23,7 +23,7 @@ echo $db_host;
 function getBdd()
 {
     try {
-        $bdd = new PDO($_ENV['DATABASE_URL'] . '; dbname=alimentation_app; charset=utf8', $_ENV['PASSWORD'], $_ENV['USER']);
+        $bdd = new PDO('mysql:host=localhost; dbname=alimentation_app; charset=utf8', 'root','root');
         return $bdd;
     } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());

@@ -3,63 +3,267 @@ ob_start();
 ?>
 <h2>Nos recettes</h2>
 
-<div class="accordion-wrap">
-	<div class="accordion">
-		<a href="#" class="active"><i class="fa fa-user"></i> Profile</a>
-		<div class="sub-nav active">
-			<div class="html about-me">
-				<div class="photo">
-					<div class="photo-overlay">
-						<span class="plus">+</span>
-					</div>
-				</div>
-				<h4>@khadkamhn</h4>
-				<p>Hi, It's me Mohan. I'm a web and graphics designer. Designing is my passion and I have been working on various designing projects.</p>
-				<div class="social-link">
-					<a class="link link-twitter" href="https://twitter.com/khadkamhn/" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a class="link link-codepen" href="https://codepen.io/khadkamhn/" target="_blank"><i class="fa fa-codepen"></i></a>
-					<a class="link link-facebook" href="https://facebook.com/khadkamhn/" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a class="link link-dribbble" href="http://dribbble.com/khadkamhn" target="_blank"><i class="fa fa-dribbble"></i></a>
-				</div>
-			</div>
-		</div>
-		<a href="#"><i class="fa fa-comments"></i> Chat</a>
-		<div class="sub-nav">
-			<div class="html chat">
-				<div class="user user-khadkamhn clearfix">
-					<span class="text-msg pull-right">I'm so unhappy :(</span>
-				</div>
-				<div class="user user-khadkamhn clearfix">
-					<span class="text-msg pull-right">I have no invitation in dribbble yet. why?</span>
-				</div>
-				<div class="user user-dribble clearfix">
-					<span class="photo pull-left" data-username="dribbble"><i class="fa fa-dribbble"></i></span>
-					<span class="text-msg">Don't worry dude!</span>
-				</div>
-				<div class="user user-dribble clearfix">
-					<span class="photo pull-left" data-username="dribbble"><i class="fa fa-dribbble"></i></span>
-					<span class="text-msg">Some awesome people may find you and invite you soon.... :)</span>
-				</div>
-			</div>
-		</div>
-		<a href="#"><i class="fa fa-envelope"></i> Messages <span class="pull-right alert-numb">21</span></a>
-		<div class="sub-nav">
-			<a href="#">Inbox <span class="pull-right alert-numb">11</span></a>
-			<a href="#">Important <span class="pull-right alert-numb">10</span></a>
-			<a href="#">Sent</a>
-			<a href="#">Draft</a>
-			<a href="#">Trash</a>
-			<a href="#">All messages</a>
-		</div>
-		<a href="#"><i class="fa fa-dribbble"></i> Dribbble Invite</a>
-		<div class="sub-nav">
-			<div class="html invite">
-				<p>I would like to join <span class="dribbble">dribbble</span> community</p>
-				<p>Could you please invite me?</p>
-				<a class="btn" href="http://dribbble.com/khadkamhn/" target="_blank">Draft Me</a>
-			</div>
-		</div>
-	</div>
+<div class="content-wrapper">
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/aubergines-farcies.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Aubergines farcies au haché de boeuf, sauce au yaourt et à la menthe</h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 288 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 40 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/saint-jacques.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Saint-Jacques en papillote
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 155 kcal pour 1 personne. Le plat est prêt en 15 minutes avec un temps de cuisson de 15 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/courgettes-farcies-allegees.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Courgette farcie allégée
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 324 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 10 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/soupe-aux-legumes-verts.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Soupe aux légumes verts
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 126 kcal pour 1 personne. Le plat est prêt en 20 minutes avec un temps de cuisson de 20 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/dosdecabillaud.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Cabillaud poché au lait de coco
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 329 kcal pour 1 personne. Le plat est prêt en 15 minutes avec un temps de cuisson de 20 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/quinoamexicaine.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Quinoa à la mexicaine
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 286 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 10 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/pancakes-aux-fraises.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Pancake allégé et compotée de fraises</h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 294 kcal pour 1 personne. Le plat est prêt en 20 minutes avec un temps de cuisson de 30 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/saint-jacques.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Riz à l’indienne
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 365 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 30 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/gaufres.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Gaufres à la compote et aux dattes
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 140 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 30 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/salade.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Salade de chèvre, figue et noix
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 389 kcal pour 1 personne. Le plat est prêt en 10 minutes avec un temps de cuisson de 0 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/carpaccio.jpg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Carpaccio de Saint-Jacques aux fruits de la passion
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 170 kcal pour 1 personne. Le plat est prêt en 15 minutes avec un temps de cuisson de 0 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="./Asset/Hamburger.jpeg" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">
+                Hamburger
+            </h2>
+            <div class="news-card__post-date">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+
+            </div>
+            <div class="news-card__details-wrapper">
+                <p class="news-card__excerpt">On peut compter 412 kcal pour 1 personne. Le plat est prêt en 15 minutes avec un temps de cuisson de 30 min.</p>
+                <a href="#" class="news-card__read-more">Voir la recette <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <?php $contenu = ob_get_clean(); ?>
