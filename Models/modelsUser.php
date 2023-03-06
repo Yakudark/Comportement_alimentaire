@@ -145,3 +145,4 @@ function updateASize($size)
     $query->bindParam(':height', $size);
     $query->execute();
 }
+?>
