@@ -371,11 +371,12 @@ function validateName(createName) {
 //   });
 // });
 
+// avec l'action 
 
-  
+document.querySelectorAll('.hexagon-item').addEventListener('click', function(e) {
+  e.preventDefault();
+  location.href = 'Controllers/controller.php?action=category';
+  document.querySelector('.list').innerHtml = location.href;
+});
 
-  document.querySelectorAll('.category').addEventListener('click', function(e) {
-    e.preventDefault();
-    location.href = 'Controllers/controller.php?action=category';
-    document.querySelector('.list').innerHtml = location.href;
-  });
+  // input type date
