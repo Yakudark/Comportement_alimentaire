@@ -1,0 +1,28 @@
+{
+  "name": "comportement_alimentaire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yakudark/Comportement_alimentaire.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yakudark/Comportement_alimentaire/issues"
+  },
+  "homepage": "https://github.com/Yakudark/Comportement_alimentaire#readme",
+  "dependencies": {
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
+    "jsdom": "^21.1.0",
+    "jsdom-global": "^3.0.2"
+  }
+}

@@ -39,7 +39,9 @@ if (isset($_SESSION['user_id'])) {
 
         <div class="navbar">
             <div class="logo">
-                <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
+                <a href="index.php">
+                    <img src="./Asset/logo9ter.png" alt="Logo Scale In Diet">
+                </a>
             </div>
             <nav>
 
@@ -87,7 +89,7 @@ if (isset($_SESSION['user_id'])) {
                 <a href=".\index.php?action=VuesUser">
                     <div class="connect">Mon profil</div>
                 </a>
-                <a href=".\index.php?action=logIn">
+                <a href=".\index.php?action=deconnection">
                     <div class="connect">Déconnexion</div>
                 </a>
             <?php
@@ -226,7 +228,7 @@ if (isset($_SESSION['user_id'])) {
                 </div>
             </footer>
 
-            <script src="./JS/index.js"></script>
+            <script type="module" src="./JS/index.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
