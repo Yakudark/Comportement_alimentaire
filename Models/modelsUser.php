@@ -4,12 +4,12 @@ require './vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire');
+$dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\Ali cours\Brief 6');
 $dotenv->load();
 
-require_once 'C:\MAMP\htdocs\app_alimentation\Comportement_alimentaire\vendor/autoload.php';
+require_once 'C:\MAMP\htdocs\Ali cours\Brief 6\vendor\autoload.php';
 
-$dotenv = Dotenv::createImmutable('C:/MAMP/htdocs/app_alimentation/Comportement_alimentaire/');
+$dotenv = Dotenv::createImmutable('C:\MAMP\htdocs\Ali cours\Brief 6');
 $dotenv->load();
 
 $db_host = getenv('DATABASE_URL');
