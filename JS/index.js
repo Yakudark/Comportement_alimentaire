@@ -216,6 +216,25 @@ function calculateImc() {
     document.getElementById('imcCategory').innerHTML = category;
 }
 
+// -------------Progress bar--------------------------
+// Récupération du nombre de calories (ex: 2000)
+let calories = 2600;
 
+// Calcul de la largeur de la barre de progression en pourcentage
+let progressWidth = (calories - 1000) / (4000 - 1000) * 100;
 
+// Détermination de la classe à appliquer en fonction du nombre de calories
+let progressClass = '';
+if (calories < 1500) {
+  progressClass = 'low';
+} else if (calories < 2500) {
+  progressClass = 'medium';
+} else {
+  progressClass = 'high';
+}
+
+// Modification de la classe de la progression et de sa largeur en fonction du nombre de calories
+let progressBar = document.querySelector('.progress');
+progressBar.classList.add(progressClass);
+progressBar.style.width = progressWidth + '%';
 

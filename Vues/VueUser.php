@@ -70,8 +70,8 @@ $edit = false;
     <div class="section_user_2_gauche">
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
         <h3>Vous avez consommé :</h3>
-        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar progress-bar-striped" style="width: 50%"></div>
+        <div class="progress-bar">
+            <div class="progress"></div>
         </div>
 
         <!-- FORMULAIRE ------------------------------------------------->
@@ -119,7 +119,7 @@ $edit = false;
                                     <div class="page-title  home text-center">
                                         <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : veuillez choisir votre famille d'aliments
                                         </h2>
-                                        <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Envirionnement et du Travail sous tutelle du ministère de la santé)</p>
+                                        <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Environnement et du Travail sous tutelle du ministère de la santé</p>
                                     </div>
 
                                     <div class="hexagon-menu clear">
