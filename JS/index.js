@@ -167,7 +167,7 @@ for (let i = 0; i < hexagonItems.length; i++) {
                     console.log('JSON data from server:', data);
                     listAliment.innerHTML = `<option>Choisissez votre aliment</option>`
                     for (let i = 0; i < data.length; i++) {
-                        listAliment.innerHTML += `<option value=${data[i].name_food}>${data[i].name_food}</option>`
+                        listAliment.innerHTML += `<option value=${data[i].id} name="food">${data[i].name_food}</option>`
                     }
                 } catch (err) {
                     console.error('Error parsing JSON data:', err);

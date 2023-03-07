@@ -1,10 +1,10 @@
 <?php
 require(__DIR__ . '/../Models/modelsUser.php');
 require(__DIR__ . '/../Models/modelsFood.php');
+require(__DIR__ . '/../Models/modelsDate.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-// require('././Models/modelsFood.php');
-// require('././Models/modelsDate.php');
+
 if ($_GET['action'] === 'getAllFoodFromCategory') {
     getAllFoodFromCategory();
 }
@@ -159,12 +159,23 @@ function getAllFoodFromCategory()
 
         $json_data = json_encode($list);
         echo $json_data;
-
-
         // echo json_encode($data['category']);
     } else {
         echo "Category is not set";
     }
+}
+
+function addNewDate()
+{
+    session_start();
+    var_dump($_POST);
+    $userId = $_SESSION['user_id'];
+    $foodId = $_POST['list'];
+    $quantity = $_POST['mealQuantity'];
+    $date = $_POST['mealDate'];
+    $typeOfMeal = $_POST['check'];
+
+    $result = addDate($userId, $foodId, $date, $quantity, $typeOfMeal);
 }
 
 function VuesRecette()
