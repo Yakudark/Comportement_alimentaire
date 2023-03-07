@@ -24,13 +24,13 @@ ob_start();
 
                 <div class="d-flex align-items-center my-4">
                     <span>Sexe</span>
-                    <input type="radio" name="sexe" class="sexe" value="féminin">Féminin<br><br>
-                    <input type="radio" name="sexe" class="sexe" value="masculin">Masculin<br><br>
+                    <input type="radio" name="sexe" class="sexe" value="féminin" required>Féminin<br><br>
+                    <input type="radio" name="sexe" class="sexe" value="masculin" required>Masculin<br><br>
                 </div>
 
                 <div class="mt-5 mb-3">
                     <label for="date_of_birth">Date de naissance</label>
-                    <input type="date" name="date_of_birth" id="date_of_birth">
+                    <input type="date" name="date_of_birth" id="date_of_birth" required>
                 </div>
 
                 <label for="email"></label>

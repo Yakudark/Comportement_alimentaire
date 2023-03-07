@@ -18,7 +18,7 @@
 .container_user .btn_height {
     position: absolute;
     bottom: -20px;
-    right: 5px;
+    right: 300px;
     border: none;
     outline: none;
     display: flex;
@@ -36,7 +36,7 @@
 .container_user .btn_weight {
     position: absolute;
     bottom: -20px;
-    right: 300px;
+    right: 580px;
     border: none;
     outline: none;
     display: flex;
@@ -50,7 +50,23 @@
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
 }
-
+.container_user .btn_recap {
+    position: absolute;
+    bottom: -20px;
+    right: 60px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background-color: #3FC068;
+    color: #fff;
+    padding: 22px 45px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+}
 .container__text {
     padding: 40px 40px 0;
 }

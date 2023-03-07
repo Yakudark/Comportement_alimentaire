@@ -5,7 +5,7 @@ require(__DIR__ . '/../Models/modelsDate.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if ($_GET['action'] === 'getAllFoodFromCategory') {
+if (isset($_GET['action']) && ($_GET['action'] === 'getAllFoodFromCategory')) {
     getAllFoodFromCategory();
 }
 
@@ -127,6 +127,7 @@ function calculateQuotKcal()
             // echo $kcalNecessary;
         }
     }
+
     return $kcalNecessary;
 }
 // Affiche une erreur
@@ -182,4 +183,10 @@ function VuesRecette()
 {
     session_start();
     require './Vues/VueRecette.php';
+}
+
+function VuesRecap()
+{
+    session_start();
+    require './Vues/VueRecap.php';
 }

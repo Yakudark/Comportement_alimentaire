@@ -26,6 +26,8 @@ try {
             addNewDate();
         } else if ($_GET['action'] == 'VuesRecette') {
             VuesRecette();
+        } else if ($_GET['action'] == 'VuesRecap') {
+            VuesRecap();
         }
         // else 
         // if ($_GET['action'] == 'deleteClient') {

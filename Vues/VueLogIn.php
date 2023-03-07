@@ -25,7 +25,7 @@ ob_start();
                             <div class="icon">
                                 <i class="far fa-user"></i>
                             </div>
-                            <input id="mail" class="input-area" type="text" placeholder="        Email" name="email">
+                            <input id="mail" class="input-area" type="text" placeholder="        Email" name="email" required>
                         </div>
                         </br>
                         <div class="row">
@@ -33,7 +33,7 @@ ob_start();
                                 <i class="fas fa-lock"></i>
                             </div>
 
-                            <input id="pw" class="input-area" placeholder="        Password" type="password" name="pwd">
+                            <input id="pw" class="input-area" placeholder="        Password" type="password" name="pwd" required>
                         </div>
                         <div class="btns">
                             <input class="login-btn py-2 px-4" type="submit" value="Log in" title="Log in" />
