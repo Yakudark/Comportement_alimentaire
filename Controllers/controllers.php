@@ -5,7 +5,7 @@ require(__DIR__ . '/../Models/modelsDate.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if ($_GET['action'] === 'getAllFoodFromCategory') {
+if (isset($_GET['action']) && ($_GET['action'] === 'getAllFoodFromCategory')) {
     getAllFoodFromCategory();
 }
 
