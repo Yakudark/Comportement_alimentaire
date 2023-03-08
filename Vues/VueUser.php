@@ -49,8 +49,9 @@ $edit = false;
                 </div>
                 <div class="container__text__timing_time">
                     <h2>Votre quotat calorifique</h2>
-                    <p><?= $kcalNecessary ?>Kcal</p>
+                    <p id="kcalNecessary"><?= $kcalNecessary ?>Kcal</p>
                 </div>
+               
             </div>
             <button class="btn_weight btn_user">
                 <a id="updateWeightLink">
@@ -62,6 +63,11 @@ $edit = false;
                     Modifier votre taille
                 </a>
             </button>
+            <button class="btn_recap btn_user">
+                <a href="index.php?action=VuesRecap" id="updateRecap">
+                    Voir mon récap
+                </a>
+            </button>
         </div>
     </div>
 </div>
@@ -69,6 +75,10 @@ $edit = false;
 <section class="section_user_2">
     <div class="section_user_2_gauche">
         <!---------------------FIN DE SECTION CARTE UTILISATEUR--------------------->
+        <h3>Vous avez consommé :</h3>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
 
         <!-- FORMULAIRE ------------------------------------------------->
         <form action="<?= ".\index.php?action=addNewDate" ?>" method="post" id="chooseFood">
@@ -77,27 +87,27 @@ $edit = false;
 
                 <div class="buttons">
                     <label class="pdj">
-                        <input type="radio" name="check" value="Petit déjeuner">
+                        <input type="radio" name="check" value="Petit déjeuner" required>
                         <span></span>
                         <i class="bi bi-cup-hot-fill"></i>
                     </label>
                     <label class="encas">
-                        <input type="radio" name="check" value="Encas">
+                        <input type="radio" name="check" value="Encas" required>
                         <span></span>
                         <i class="bi bi-egg-fried"></i>
                     </label>
                     <label class="dejeuner">
-                        <input type="radio" name="check" value="Déjeuner">
+                        <input type="radio" name="check" value="Déjeuner" required>
                         <span></span>
                         <i class="bi bi-brightness-high-fill"></i>
                     </label>
                     <label class="gouter">
-                        <input type="radio" name="check" value="Goûter">
+                        <input type="radio" name="check" value="Goûter" required>
                         <span></span>
                         <i class="bi bi-apple"></i>
                     </label>
                     <label class="diner">
-                        <input type="radio" name="check" value="Dîner">
+                        <input type="radio" name="check" value="Dîner" required>
                         <span></span>
                         <i class="bi bi-moon-stars-fill"></i>
                     </label>
@@ -115,7 +125,7 @@ $edit = false;
                                     <div class="page-title  home text-center">
                                         <h2 class="heading-page"> <span class="fancy">Seconde étape</span> : veuillez choisir votre famille d'aliments
                                         </h2>
-                                        <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Envirionnement et du Travail sous tutelle du ministère de la santé)</p>
+                                        <p class="mt20">Afin de vous aider à composer vos menus, nous avons conçu ce guide. Dans chaque famille d'aliments, vous pourrez comparer les aliments en fonction de leur valeur en calories et ainsi faire plus facilement les bons choix ! La majorité de ces valeurs sont données par l'ANSES Agence National de Sécurité Sanitaire de l'Alimentation, de l'Environnement et du Travail sous tutelle du ministère de la santé</p>
                                     </div>
 
                                     <div class="hexagon-menu clear">
@@ -140,7 +150,7 @@ $edit = false;
                                         <span id="' . $id . '" class="title">' . $category1 . '</span>
                                     </span>
                                     <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    <input type="radio" name="category" id="' . $id . '" value="' . $category1 . '">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category1 . '" required>
                                 </label>
                                 </div>';
                                         }
@@ -176,7 +186,7 @@ $edit = false;
                                         <span id="' . $id . '" class="title">' . $category2 . '</span>
                                     </span>
                                     <img class="hexa" src="./Asset/Hexago.png" alt="Image d\'un hexagone">
-                                    <input type="radio" name="category" id="' . $id . '" value="' . $category2 . '">
+                                    <input type="radio" name="category" id="' . $id . '" value="' . $category2 . '" required>
                                 </label>
                                 </div>';
                                         }
@@ -193,11 +203,12 @@ $edit = false;
             </div>
             <h2 class="first"><span class="fancy">Troisième étape </span>: Veuillez choisir votre aliment </h2>
             <div class='list'>
-                <select name="list" id="listAliment">
+                <select name="list" id="listAliment" required>
                     <option>Choisissez votre aliment</option>
                 </select>
-                <input type="date" id="mealDate" name="mealDate">
-                <input type="text" id="mealQuantity" name="mealQuantity" placeholder="Quantité en grammes">
+                <input type="date" id="mealDate" name="mealDate" required>
+                <input type="text" id="mealQuantity" name="mealQuantity" placeholder="Quantité en grammes" required onkeypress="return isNumberKey(event)" maxlength="4" max="3000">
+
                 <input type="submit" id="submitMeal" name="submitMeal" value="Valider">
             </div>
 

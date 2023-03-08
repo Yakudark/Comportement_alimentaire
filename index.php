@@ -24,6 +24,10 @@ try {
             logOutUser();
         } else if ($_GET['action'] == 'addNewDate') {
             addNewDate();
+        } else if ($_GET['action'] == 'VuesRecette') {
+            VuesRecette();
+        } else if ($_GET['action'] == 'VuesRecap') {
+            VuesRecap();
         }
         // else 
         // if ($_GET['action'] == 'deleteClient') {
@@ -37,3 +41,4 @@ try {
 } catch (Exception $e) {
     erreur($e->getMessage());
 }
+?>

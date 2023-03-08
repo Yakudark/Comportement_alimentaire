@@ -28,6 +28,8 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="./Style/Style.css">
     <link rel="stylesheet" href="./Style/SignIn.css">
     <link rel="stylesheet" href="./Style/styleUser.css">
+    <link rel="stylesheet" href="./Style/styleRecette.css">
+    <link rel="stylesheet" href="./Style/styleRecap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title><?= $titre ?></title>
 
@@ -45,9 +47,7 @@ if (isset($_SESSION['user_id'])) {
             <nav>
 
                 <ul class="breadcrumb">
-                    <li class="home">
-                        <a href="#" i class="bi bi-house-fill"></i></a>
-                    </li>
+
                     <li class="breadcrumb__item breadcrumb__item-firstChild">
                         <a href="index.php?action=VuesUser"><span class="breadcrumb__title">Perdre du poids</span></a>
                     </li>
@@ -63,7 +63,7 @@ if (isset($_SESSION['user_id'])) {
                     </li>
                     <li class="breadcrumb__item breadcrumb__item-lastChild">
                         <span class="breadcrumb__inner">
-                            <span class="breadcrumb__title">Recettes</span>
+                            <a href="index.php?action=VuesRecette"><span class="breadcrumb__title">Recettes</span></a>
                         </span>
                     </li>
                 </ul>

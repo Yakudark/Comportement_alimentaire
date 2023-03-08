@@ -127,6 +127,7 @@ function calculateQuotKcal()
             // echo $kcalNecessary;
         }
     }
+
     return $kcalNecessary;
 }
 // Affiche une erreur
@@ -176,4 +177,16 @@ function addNewDate()
     $typeOfMeal = $_POST['check'];
 
     $result = addDate($userId, $foodId, $date, $quantity, $typeOfMeal);
+}
+
+function VuesRecette()
+{
+    session_start();
+    require './Vues/VueRecette.php';
+}
+
+function VuesRecap()
+{
+    session_start();
+    require './Vues/VueRecap.php';
 }

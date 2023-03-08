@@ -226,11 +226,77 @@ if (window.TESTING !== true) {
     // console.log(validateName("Yasmine2000")); // Renvoie "Le nom ne doit pas contenir de chiffre."
     // console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
 
+
+    function rangeSlide2(value) {
+        document.getElementById('secondRangeValue').innerHTML = value;
+        calculateImc();
+    }
+
+    function calculateImc() {
+        const weight = parseInt(document.getElementById('rangeValue').innerHTML);
+        const height = parseInt(document.getElementById('secondRangeValue').innerHTML);
+        const imc = (weight / ((height / 100) * (height / 100))).toFixed(2);
+        document.getElementById('imcValue').innerHTML = imc;
+        console.log(imcValue);
+
+        let category;
+        if (imc < 18.5) {
+            category = "Maigre";
+        } else if (imc < 25) {
+            category = "Normal";
+        } else if (imc < 30) {
+            category = "Surpoids";
+        } else {
+            category = "Obésité";
+        }
+        document.getElementById('imcCategory').innerHTML = category;
+    }
+
+    // -------------Progress bar--------------------------
+
+    // Récupération du nombre de calories (ex: 2000)
+    let calories = parseFloat(document.getElementById("kcalNecessary").textContent);
+    // let calories = document.getElementById("kcalNecessary").innerHTML;
+
+    // Calcul de la largeur de la barre de progression en pourcentage
+    let progressWidth = (calories - 1000) / (4000 - 1000) * 100;
+
+    // Détermination de la classe à appliquer en fonction du nombre de calories
+    let progressClass = '';
+    if (calories < 1500) {
+        progressClass = 'low';
+    } else if (calories < 2500) {
+        progressClass = 'medium';
+    } else {
+        progressClass = 'high';
+    }
+
+    // Modification de la classe de la progression et de sa largeur en fonction du nombre de calories
+    let progressBar = document.querySelector('.progress');
+    progressBar.classList.add(progressClass);
+    progressBar.style.width = progressWidth + '%';
+
+    // Récupération de l'élément input dans la vueUser pour le choix du grammage
+    var mealQuantity = document.getElementById("mealQuantity");
+
+    // Ajout de l'événement "keydown" sur l'élément input
+    mealQuantity.addEventListener("keydown", function (event) {
+        // Vérification si la touche saisie est une lettre
+        if (/^[a-zA-Z]$/.test(event.key)) {
+            // Annulation de l'événement si c'est une lettre
+            event.preventDefault();
+        }
+    });
 }
 //Fonction de calcul des kcal en fonction de la quantité
 function kcalPerQuantity(quantity, kcalPer100g) {
     let kcal = (quantity * kcalPer100g) / 100;
     return kcal;
+}
+// ---------Calcul IMC balance Vue Accueil--------------//
+function rangeSlide1(value) {
+    document.getElementById('rangeValue').innerHTML = value;
+    calculateImc();
 }
 
 function ValidateEmail(email) {
@@ -252,3 +318,5 @@ function validateName(createName) {
 }
 
 module.exports = { getIMC, kcalPerQuantity, ValidateEmail, validateName };
+
+

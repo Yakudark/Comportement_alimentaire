@@ -4,8 +4,8 @@ CREATE TABLE users(
     lastname VARCHAR(50),
     email VARCHAR(50) NOT NULL,
     pwd VARCHAR(350) NOT NULL,
-    weight_user INT,
-    height INT,
+    weight_user float,
+    height float,
     sexe VARCHAR(50),
     date_of_birth VARCHAR(30),
     PRIMARY KEY (id)

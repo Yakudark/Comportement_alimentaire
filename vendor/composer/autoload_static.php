@@ -65,7 +65,7 @@ class ComposerStaticInit8809bd2c2bef7722838f2610cae41298
         ),
         'MonProjet\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/',
+            0 => __DIR__ . '/../..' . '/../../app_alimentation/Comportement_alimentaire',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

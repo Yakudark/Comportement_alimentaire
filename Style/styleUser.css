@@ -18,7 +18,7 @@
 .container_user .btn_height {
     position: absolute;
     bottom: -20px;
-    right: 5px;
+    right: 300px;
     border: none;
     outline: none;
     display: flex;
@@ -36,7 +36,7 @@
 .container_user .btn_weight {
     position: absolute;
     bottom: -20px;
-    right: 300px;
+    right: 580px;
     border: none;
     outline: none;
     display: flex;
@@ -50,7 +50,23 @@
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
 }
-
+.container_user .btn_recap {
+    position: absolute;
+    bottom: -20px;
+    right: 60px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background-color: #3FC068;
+    color: #fff;
+    padding: 22px 45px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.294);
+}
 .container__text {
     padding: 40px 40px 0;
 }
@@ -86,7 +102,7 @@
     font-size: 1.2rem;
 }
 
-form {
+.form-choice {
     background-image: url(../Asset/diet.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -232,7 +248,34 @@ form {
 }
 
 /* -------------------Fin des boutons de choix de repas---------------- */
-
+.progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    height: 20px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .progress {
+    border-radius: 10px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* Couleurs de la barre de progression */
+  .progress.low {
+    background-color: #FF5733;
+  }
+  .progress.medium {
+    background-color: #4CAF50;
+  }
+  .progress.high {
+    background-color: #FBC02D;
+  }
 /* -----------------CHOIX DES ALIMENTS--------------------------------- */
 .fancy {
     position: relative;
