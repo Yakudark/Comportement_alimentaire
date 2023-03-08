@@ -243,7 +243,7 @@ function ValidateEmail(email) {
 
 function validateName(createName) {
     // Vérifie que le nom contient uniquement des lettres et des espaces
-    const regex = /^[a-zA-Z][a-zA-Z-éÉèÈàÀùÙâÂêÊîÎôÔûÛïÏëËüÜçÇ]{2,24}$/;;
+    const regex = /^[a-zA-Z][a-zA-Z-éÉèÈàÀùÙâÂêÊîÎôÔûÛïÏëËüÜçÇ]{2,24}$/;
     if (!regex.test(createName)) {
         // alert("Votre nom n'est pas valide.")
         return false;
