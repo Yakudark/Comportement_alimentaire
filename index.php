@@ -1,5 +1,5 @@
 <?php
-include('Controllers\controllers.php');
+include('Controllers/controllers.php');
 
 try {
     if (isset($_GET['action'])) {
@@ -42,3 +42,4 @@ try {
 } catch (Exception $e) {
     erreur($e->getMessage());
 }
+?>

@@ -293,3 +293,55 @@ function validateName(createName) {
 module.exports = { getIMC, kcalPerQuantity, ValidateEmail, validateName };
 
 
+// tableau des 10 jours en fonction de la date d'ajd
+const today = new Date();
+
+let tab = [];
+
+for (let i = 0; i <= 10; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - i);
+
+    // fonction pour formater la date
+    tab[i] = date.toLocaleDateString(); 
+    console.log(tab[i]);
+}
+
+// On récupère la calorie optimal à consommer par jour dans vueUser.php
+let moyenneCal = parseFloat(document.getElementById("kcalNecessary").textContent);
+
+
+
+function chart(){
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [tab[9] , tab[8] , tab[7], tab[6], tab[5], tab[4], tab[3],tab[2] , tab[1], tab[0]],
+        datasets: [
+        {
+          label: 'Calories consommées',
+          data: [0, 1700, 2000, 1400, 1233, 1800, 1600, 1500, 4000, 3000],
+          borderWidth: 2,
+          borderColor: '#3FC068'
+        },
+        {
+        label: 'Nombre de calories optimal à consommer',
+        data: [moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal, moyenneCal],
+        borderWidth: 3,
+        borderColor: '#dbb71d'
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+          y: {
+            min: 0,
+            max: 6000,
+          }
+        }
+      },
+    })
+    }
+    chart();
