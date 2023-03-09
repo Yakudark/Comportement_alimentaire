@@ -227,7 +227,7 @@ if (window.TESTING !== true) {
     // console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
 
 
-    
+
 
     // -------------Progress bar--------------------------
 
