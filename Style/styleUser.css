@@ -460,7 +460,9 @@
 .hex-content:hover {
     color: #fff;
 }
-
+.row>* {
+    padding-right: 0;
+}
 
 /*------------------------------------------------
       Welcome Page
@@ -468,15 +470,11 @@
 
 @media (min-width: 1200px) {
     .col-lg-offset-2 {
-        margin-left: 16.66666667%;
+        margin-left: 16%;
     }
 }
 
-@media (min-width: 1200px) {
-    .col-lg-8 {
-        width: 66.66666667%;
-    }
-}
+
 
 .hexagon-item:first-child {
     margin-left: 0;

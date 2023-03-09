@@ -213,28 +213,43 @@ $edit = false;
                 <!-- <input type="submit" id="submitMeal" name="submitMeal" value="Valider" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Etes-vous sûr d'ajouter cet aliment ?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <input type="submit" class="btn btn-secondary" id="submitMeal" name="submitMeal" value="Valider">
-                        </div>
+            <!-- Affichage du tableau dans le HTML pour le jour en cours -->
+            <div class="st_wrap_table" data-table_id="0">
+                <div class="st_table_header">
+                    <h2>Journée du : <?php echo date('d-m-Y'); ?></h2>
+                    <h3>Total de la journée : ' . $total_kcal_jour . ' kcal</h3>
+                    <div class="st_row">
+                        <div class="st_column _name">Date</div>
+                        <div class="st_column _type">Type de plat</div>
+                        <div class="st_column _rank">Nom</div>
+                        <div class="st_column _kcal">kcal pour 100g</div>
+                        <div class="st_column _quantity">Quantité</div>
+                        <div class="st_column _type">Kcal total</div>
                     </div>
                 </div>
-            </div>
+                <div class="st_table">;
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Etes-vous sûr d'ajouter cet aliment ?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                    <input type="submit" class="btn btn-secondary" id="submitMeal" name="submitMeal" value="Valider">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </form>
 
 
 
-        <script type="module" src="./JS/index.js"></script>
+        <script type="module" src="../JS/index.js"></script>
         <?php $contenu = ob_get_clean(); ?>
 
         <?php require 'gabarit.php'; ?>

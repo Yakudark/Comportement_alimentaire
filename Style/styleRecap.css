@@ -25,8 +25,8 @@
   
   /** Sticky table styles **/
   .st_viewport{
-    background-color: rgb(62,148,236);
-    color: rgb(27,30,36);
+    /* background-color: rgb(62,148,236); */
+    color: greenyellow;
     margin: 20px 0;
     max-height: 500px;
     overflow: auto;
@@ -41,7 +41,7 @@
     position: sticky;
     top: 0px;
     z-index: 1;
-    background-color: rgb(27,30,36);
+    background-color: rgb(62, 116, 62);
     color: rgb(220,220,220);
   }
   .st_table_header h2{
@@ -78,12 +78,17 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
+  
   }
-  .st_table .st_row:nth-child(even){
-    background-color: rgba(0,0,0, .1)
-  }
+
+ .st_table_header {
+   border-bottom: 2px solid #000;
+ }
   /* #   column */
   .st_column{
-    padding: 10px 20px;
+    padding: 10px;
+    flex : 1;
+    
   }
