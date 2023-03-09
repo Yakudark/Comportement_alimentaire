@@ -234,7 +234,7 @@ $edit = false;
 
 
 
-
+        <script type="module" src="./JS/index.js"></script>
         <?php $contenu = ob_get_clean(); ?>
 
         <?php require 'gabarit.php'; ?>
