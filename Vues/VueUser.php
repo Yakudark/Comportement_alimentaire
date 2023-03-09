@@ -213,10 +213,10 @@ $edit = false;
                 <!-- <input type="submit" id="submitMeal" name="submitMeal" value="Valider" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
             </div>
 
-             <!-- Affichage du tableau dans le HTML pour le jour en cours -->
+            <!-- Affichage du tableau dans le HTML pour le jour en cours -->
             <div class="st_wrap_table" data-table_id="0">
                 <div class="st_table_header">
-                <h2>Journée du : <?php echo date('d-m-Y'); ?></h2>
+                    <h2>Journée du : <?php echo date('d-m-Y'); ?></h2>
                     <h3>Total de la journée : ' . $total_kcal_jour . ' kcal</h3>
                     <div class="st_row">
                         <div class="st_column _name">Date</div>
@@ -249,7 +249,7 @@ $edit = false;
 
 
 
-        <script type="module" src="./JS/index.js"></script>
+        <script type="module" src="../JS/index.js"></script>
         <?php $contenu = ob_get_clean(); ?>
 
         <?php require 'gabarit.php'; ?>

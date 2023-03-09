@@ -160,7 +160,7 @@ ob_start();
             </div>
         </div>
 </section>
-
+<script src="../JS/home.js"></script>
 
 <?php $contenu = ob_get_clean(); ?>
 
