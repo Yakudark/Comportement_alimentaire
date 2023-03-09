@@ -17,8 +17,11 @@
   ._kcal{
     min-width: 80px;
   }
+  ._kcaltot {
+    min-width: 60px;
+  }
 
-  
+
   pre{
     overflow: auto;
   }
@@ -31,10 +34,7 @@
     max-height: 500px;
     overflow: auto;
   }
-  /* ###  Table wrap */
-  .st_wrap_table{
-    
-  }
+ 
   /* ##   header */
   .st_table_header{
     position: -webkit-sticky;
@@ -57,9 +57,7 @@
   .st_table_header .st_row{
     color: rgba(220,220,220, .7);
   }
-  .st_table_header .st_column{
-    
-  }
+
   /* ##  table */
   .st_table{
     display: -webkit-box;
@@ -88,7 +86,13 @@
  }
   /* #   column */
   .st_column{
-    padding: 10px;
+    padding: 8px;
     flex : 1;
     
+  }
+  .bi {
+    cursor: pointer;
+  }
+  .bi:hover {
+    color:green;
   }
