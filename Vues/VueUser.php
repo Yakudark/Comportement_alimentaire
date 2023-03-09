@@ -209,10 +209,32 @@ $edit = false;
                 <input type="date" id="mealDate" name="mealDate" required>
                 <input type="text" id="mealQuantity" name="mealQuantity" placeholder="Quantité en grammes" required onkeypress="return isNumberKey(event)" maxlength="4" max="3000">
 
-                <input type="submit" id="submitMeal" name="submitMeal" value="Valider">
+                <button type="button" class="btn btn-primary mt-5 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Valider</button>
+                <!-- <input type="submit" id="submitMeal" name="submitMeal" value="Valider" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
             </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Etes-vous sûr d'ajouter cet aliment ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <input type="submit" class="btn btn-secondary" id="submitMeal" name="submitMeal" value="Valider">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
+
+
+
+
         <?php $contenu = ob_get_clean(); ?>
 
         <?php require 'gabarit.php'; ?>

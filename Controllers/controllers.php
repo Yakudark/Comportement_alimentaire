@@ -9,6 +9,10 @@ if (isset($_GET['action']) && ($_GET['action'] === 'getAllFoodFromCategory')) {
     getAllFoodFromCategory();
 }
 
+if (isset($_GET['action']) && ($_GET['action'] === 'getAllAlimentsEaten')) {
+    getAllAlimentsEaten();
+}
+
 // Affiche la liste de tous les employés de l'entreprise
 function accueil()
 {
@@ -85,7 +89,6 @@ function updateWeight()
 {
     session_start();
     $weight = $_GET['weight'];
-    echo $_SESSION['user_id'];
     updateAWeight($weight);
 
     $userInfo = getOneUser($_SESSION['user_id']);
@@ -96,7 +99,6 @@ function updateSize()
 {
     session_start();
     $size = $_GET['size'];
-    echo $_SESSION['user_id'];
     updateASize($size);
 
     $userInfo = getOneUser($_SESSION['user_id']);
@@ -151,16 +153,8 @@ function getAllFoodFromCategory()
     if (isset($data['category'])) {
         $category = $data['category'];
         $list = getAllFoodFromOneCategory($category);
-        // $name_food = [];
-        // foreach ($list as $aliment) {
-        //     array_push($name_food, $aliment['name_food']);
-        // }
-        // $json_data = json_encode($name_food);
-        // echo $json_data;
-
         $json_data = json_encode($list);
         echo $json_data;
-        // echo json_encode($data['category']);
     } else {
         echo "Category is not set";
     }
@@ -169,7 +163,6 @@ function getAllFoodFromCategory()
 function addNewDate()
 {
     session_start();
-    var_dump($_POST);
     $userId = $_SESSION['user_id'];
     $foodId = $_POST['list'];
     $quantity = $_POST['mealQuantity'];
@@ -177,6 +170,8 @@ function addNewDate()
     $typeOfMeal = $_POST['check'];
 
     $result = addDate($userId, $foodId, $date, $quantity, $typeOfMeal);
+    $userInfo = getOneUser($_SESSION['user_id']);
+    require './Vues/VueUser.php';
 }
 
 function VuesRecette()
@@ -190,4 +185,21 @@ function VuesRecap()
     session_start();
     $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueRecap.php';
+}
+
+function getAllAlimentsEaten()
+{
+    $json_data = file_get_contents('php://input');
+    $data = json_decode($json_data, true);
+
+    session_start();
+    $userId = $_SESSION['user_id'];
+
+    if (isset($data['date_of_eaten'])) {
+        $date_of_eaten = $data['date_of_eaten'];
+
+        $result = getAlimentsEaten($userId, $date_of_eaten);
+        $json_data = json_encode($result);
+        echo $json_data;
+    }
 }

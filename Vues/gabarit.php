@@ -1,22 +1,3 @@
-<?php
-// session_start();
-
-// // Vérification de l'authentification de l'utilisateur
-// if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-//     header('Location: index.php');
-//     exit;
-// }
-
-
-if (isset($_SESSION['user_id'])) {
-    echo $_SESSION['user_id'];
-}
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +12,7 @@ if (isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="./Style/styleRecette.css">
     <link rel="stylesheet" href="./Style/styleRecap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
     <title><?= $titre ?></title>
 
 </head>

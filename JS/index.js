@@ -43,9 +43,11 @@ if (window.TESTING !== true) {
             input.name = "weight"
             infoWeight.parentNode.replaceChild(input, infoWeight);
             weightBtn.innerHTML = "Valider mon poids";
+            weightBtn.style.background = "blue";
         } else {
             infoWeight.innerHTML = infoWeightValue;
             weightBtn.innerHTML = "Modifier mon poids";
+            weightBtn.style.background = "#3FC068";
             let url = `./index.php?action=updateWeight&weight=${input.value}`;
             window.location.href = url.replace(/ /g, "");
         }
@@ -61,9 +63,11 @@ if (window.TESTING !== true) {
             input.name = "size"
             infoSize.parentNode.replaceChild(input, infoSize);
             heightBtn.innerHTML = "Valider ma taille";
+            heightBtn.style.background = "blue";
         } else {
             infoSize.innerHTML = infoSizeValue;
             heightBtn.innerHTML = "Modifier ma taille";
+            heightBtn.style.background = "#3FC068";
             let url = `./index.php?action=updateSize&size=${input.value}`;
             window.location.href = url.replace(/ /g, "");
         }
@@ -98,6 +102,7 @@ if (window.TESTING !== true) {
         }
     }
     getImageImc();
+
 }
 
 //--------------------------Input pour le choix de la famille d'aliment--------------------//
@@ -182,15 +187,15 @@ if (window.TESTING !== true) {
 
     // Password
 
-    let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+    // let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
-    if (!PWD_REGEX.test(createPw.value)) {
-        alert("Votre mot de passe n'est pas valide.")
-    };
+    // if (!mediumRegex.test(createPw.value)) {
+    //     alert("Votre mot de passe n'est pas valide.")
+    // };
 
-    if (!PWD_REGEX.test(pw.value)) {
-        alert("Votre mot de passe n'est pas valide.")
-    }
+    // if (!mediumRegex.test(pw.value)) {
+    //     alert("Votre mot de passe n'est pas valide.")
+    // }
 
     // Exemple d'utilisation pour les tests :
     // console.log(checkPassword("Abcd1234")); // Renvoie "Le mot de passe est valide."
@@ -228,6 +233,8 @@ if (window.TESTING !== true) {
 
 
     
+
+
 
     // -------------Progress bar--------------------------
 
@@ -319,6 +326,40 @@ function validateName(createName) {
     }
     return true;
 }
+
+// let lastTenDays = [];
+// function createTableForLast10Days() {
+//     let today = new Date;
+//     lastTenDays.push(today)
+//     console.log(lastTenDays)
+//     let newDate = today;
+//     console.log(newDate)
+//     for (let i = 0; i < 9; i++) {
+//         if (newDate.getDate() > 1) {
+//             newDate.setDate(today.getDate() - 1)
+//             console.log(newDate)
+//         } else {
+//             if (newDate.getMonth() > 1) {
+//                 newDate.setMonth(today.getMonth() - 1);
+//                 newDate.setDate((new Date(newDate.getFullYear(), newDate.getMonth() + 1, 0)).getDate())
+//                 console.log(newDate)
+//             } else {
+//                 newDate.setMonth(12);
+//                 newDate.setFullYear(today.getFullYear() - 1);
+//                 newDate.setDate((new Date(newDate.getFullYear(), newDate.getMonth() + 1, 0)))
+//                 console.log(newDate)
+//             }
+//         }
+//         // lastTenDays.push(newDate)
+//     }
+//     console.log(lastTenDays)
+// }
+
+// createTableForLast10Days()
+// lastTenDays.forEach(day => {
+//     let date = day.getFullYear() + "-" + day.getMonth() + "-" + day.getDate();
+//     console.log(date)
+// })
 
 module.exports = { getIMC, kcalPerQuantity, ValidateEmail, validateName };
 
