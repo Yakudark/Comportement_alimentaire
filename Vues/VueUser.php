@@ -51,7 +51,7 @@ $edit = false;
                     <h2>Votre quotat calorifique</h2>
                     <p id="kcalNecessary"><?= $kcalNecessary ?>Kcal</p>
                 </div>
-               
+
             </div>
             <button class="btn_weight btn_user">
                 <a id="updateWeightLink">
