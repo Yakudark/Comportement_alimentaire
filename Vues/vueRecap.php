@@ -63,7 +63,7 @@ ob_start();
         echo '<div class="st_column _name">Date</div>';
         echo '<div class="st_column _type">Type de plat</div>';
         echo '<div class="st_column _rank">Nom</div>';
-        echo '<div class="st_column _kcal">kcal</div>';
+        echo '<div class="st_column _kcal">kcal pour 100g</div>';
         echo '<div class="st_column _quantity">Quantité</div>';
         echo '<div class="st_column _type">Kcal total</div>';
         echo '</div>';

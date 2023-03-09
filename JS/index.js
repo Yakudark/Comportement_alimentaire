@@ -227,30 +227,7 @@ if (window.TESTING !== true) {
     // console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
 
 
-    function rangeSlide2(value) {
-        document.getElementById('secondRangeValue').innerHTML = value;
-        calculateImc();
-    }
-
-    function calculateImc() {
-        const weight = parseInt(document.getElementById('rangeValue').innerHTML);
-        const height = parseInt(document.getElementById('secondRangeValue').innerHTML);
-        const imc = (weight / ((height / 100) * (height / 100))).toFixed(2);
-        document.getElementById('imcValue').innerHTML = imc;
-        console.log(imcValue);
-
-        let category;
-        if (imc < 18.5) {
-            category = "Maigre";
-        } else if (imc < 25) {
-            category = "Normal";
-        } else if (imc < 30) {
-            category = "Surpoids";
-        } else {
-            category = "Obésité";
-        }
-        document.getElementById('imcCategory').innerHTML = category;
-    }
+    
 
     // -------------Progress bar--------------------------
 
@@ -293,12 +270,38 @@ function kcalPerQuantity(quantity, kcalPer100g) {
     let kcal = (quantity * kcalPer100g) / 100;
     return kcal;
 }
-// ---------Calcul IMC balance Vue Accueil--------------//
+// // ---------Calcul IMC balance Vue Accueil--------------//
 function rangeSlide1(value) {
     document.getElementById('rangeValue').innerHTML = value;
+    calculateImc();  
+}
+
+function rangeSlide2(value) {
+    document.getElementById('secondRangeValue').innerHTML = value;
     calculateImc();
 }
 
+function calculateImc() {
+    const weight = parseInt(document.getElementById('rangeValue').innerHTML);
+    const height = parseInt(document.getElementById('secondRangeValue').innerHTML);
+    const imc = (weight / ((height / 100) * (height / 100))).toFixed(2);
+    console.log(imc);
+    document.getElementById('imcValue').innerHTML = imc;
+    console.log(imcValue);
+
+    let category;
+    if (imc < 18.5) {
+        category = "Maigre";
+    } else if (imc < 25) {
+        category = "Normal";
+    } else if (imc < 30) {
+        category = "Surpoids";
+    } else {
+        category = "Obésité";
+    }
+    document.getElementById('imcCategory').innerHTML = category;
+}
+// -------------------------------------------------------------------------------------------------------
 function ValidateEmail(email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         return (true)
