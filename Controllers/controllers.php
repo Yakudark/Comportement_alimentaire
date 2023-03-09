@@ -183,6 +183,7 @@ function VuesRecette()
 function VuesRecap()
 {
     session_start();
+    $userInfo = getOneUser($_SESSION['user_id']);
     require './Vues/VueRecap.php';
 }
 
