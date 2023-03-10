@@ -331,3 +331,42 @@
     font-size: 4em;
     text-align: center;
   }
+  @media (max-width: 1830px) {
+    .imc-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .imc-left-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .IMCOMS img {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .imc-right-container {
+        width: 100%;
+        text-align: center;
+    }
+    .range-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .range, #rangeValue, #rangeUnit, #secondRangeValue, #secondRangeUnit {
+        font-size: 1.5em;
+    }
+    .range {
+        width: 100%;
+        max-width: 400px;
+    }
+    #imcValue, #imcCategory {
+        font-size: 2em;
+    }
+
+    
+  }

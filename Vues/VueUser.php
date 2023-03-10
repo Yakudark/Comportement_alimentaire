@@ -213,24 +213,32 @@ $edit = false;
                 <!-- <input type="submit" id="submitMeal" name="submitMeal" value="Valider" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
             </div>
 
-           
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Etes-vous sûr d'ajouter cet aliment ?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <input type="submit" class="btn btn-secondary" id="submitMeal" name="submitMeal" value="Valider">
-                                </div>
-                            </div>
+            <!-- Affichage du tableau dans le HTML pour le jour en cours -->
+
+            <h3 class="titleRecap"><span class="fancy">Récapitulatif</span> de la consommation des 10 derniers jours</h3>
+            <div class="chartHere">
+                <canvas id="myChart">
+                </canvas>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Etes-vous sûr d'ajouter cet aliment ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <input type="submit" class="btn btn-secondary" id="submitMeal" name="submitMeal" value="Valider">
                         </div>
                     </div>
+                </div>
+            </div>
         </form>
 
 

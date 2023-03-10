@@ -134,31 +134,31 @@ ob_start();
 </section>
 <section class="imc-content">
 
-<div class="imc-left-container">
-    <h2>Calculez votre IMC </h2>
-    <div class="IMCOMS">
-        <img src="./Asset/Imc ONS.jpg" alt="I.M.C selon l'O.M.S">
-    </div>
-</div>
-<div class="imc-right-container">
-    <div class="range-container">
-        <div>
-            <h2>Saisissez votre poids</h2>
-            <span id="rangeValue">70</span><span id="rangeUnit"> kg</span><br>
-            <input class="range" type="range" name="" value="70" min="0" max="350" id="range1">
-        </div>
-        <div>
-            <h2>Saisissez votre taille</h2>
-            <span id="secondRangeValue">170</span><span id="secondRangeUnit"> cm</span><br>
-            <input class="range" type="range" name="" value="170" min="0" max="290" id="range2">
-        </div>
-        <div>
-            <h2>Voici votre indice de masse corporelle :</h2>
-            <span id="imcValue">0</span><br>
-            <h2>Votre catégorie d'IMC :</h2>
-            <span id="imcCategory"></span>
+    <div class="imc-left-container">
+        <h2>Calculez votre IMC </h2>
+        <div class="IMCOMS">
+            <img src="./Asset/Imc ONS.jpg" alt="I.M.C selon l'O.M.S">
         </div>
     </div>
+    <div class="imc-right-container">
+        <div class="range-container">
+            <div>
+                <h2>Saisissez votre poids</h2>
+                <span id="rangeValue">70</span><span id="rangeUnit"> kg</span><br>
+                <input class="range" type="range" name="" value="70" min="0" max="350" id="range1">
+            </div>
+            <div>
+                <h2>Saisissez votre taille</h2>
+                <span id="secondRangeValue">170</span><span id="secondRangeUnit"> cm</span><br>
+                <input class="range" type="range" name="" value="170" min="0" max="290" id="range2">
+            </div>
+            <div>
+                <h2>Voici votre indice de masse corporelle :</h2>
+                <span id="imcValue">0</span><br>
+                <h2>Votre catégorie d'IMC :</h2>
+                <span id="imcCategory"></span>
+            </div>
+        </div>
 
 </section>
 <script src="./JS/home.js"></script>
