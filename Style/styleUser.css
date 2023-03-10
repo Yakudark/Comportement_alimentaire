@@ -7,6 +7,9 @@
     grid-template-columns: 300px 600px;
     border-radius: 5px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+    background-image: url(../Asset/diet.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .container_user img {
@@ -36,7 +39,7 @@
 .container_user .btn_weight {
     position: absolute;
     bottom: -20px;
-    right: 580px;
+    right: 608px;
     border: none;
     outline: none;
     display: flex;
@@ -112,10 +115,16 @@
     display: flex;
     justify-content: center;
 }
+.section_user_2 h3 {
+    text-align: center;
+    font-family: cursive;
+}
+
 
 .first {
     text-align: center;
     margin-top: 3%;
+   
 }
 
 .section_user_choice {
@@ -463,7 +472,14 @@
 .row>* {
     padding-right: 0;
 }
-
+.page-title {
+    backdrop-filter: blur(20px);
+    
+}
+.mt20 {
+    color: white;
+    font-size: 1.5rem;
+}
 /*------------------------------------------------
       Welcome Page
   -------------------------------------------------*/
@@ -571,6 +587,9 @@
 
 #chooseFood {
     padding-bottom: 50px;
+    background-image: url(../Asset/fondHeader.png);
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 #chooseFood input[type='submit'] {
@@ -580,3 +599,51 @@
     background: rgb(229, 26, 152);
     border: none !important;
 }
+/* ------------------Chart et title de chart--------------------------------- */
+.chartHere{
+    width: 80%;
+    margin: auto;
+
+}
+#myChart{
+    background-color: white;
+}
+.titleRecap{
+    margin: 3% auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .container_user{
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        
+    }
+    .list{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .btn_height, .btn_recap, .btn_weight {
+        position: relative !important;
+        display: block !important;
+        bottom: 0px !important;
+        right: 0px !important;
+        width: 80%;
+        margin: 2%;
+    }
+    .btn_recap{
+        margin-bottom: 8% !important;
+    }
+    .container_btn{
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    .container__text {
+        backdrop-filter: blur(20px);
+    }
+    }
