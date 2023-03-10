@@ -70,11 +70,18 @@ if (window.TESTING !== true) {
     })
     console.log(infoWeightValue);
     console.log(infoSizeValue);
+    infoSizeValue = infoSizeValue.replace(/ /g, "")
+    infoWeightValue = infoWeightValue.replace(/ /g, "")
 
     let IMCContent = document.querySelector("#imc");
-    if (infoWeightValue && infoSizeValue) {
+    console.log("premier" + infoWeightValue + "deu" + infoSizeValue)
+    if (infoWeightValue !== "" && infoSizeValue !== "") {
         let IMCValue = getIMC(infoWeightValue, infoSizeValue / 100);
-        IMCContent.innerHTML = IMCValue;
+        if (isNaN(IMCValue)) {
+            IMCContent.innerHTML = "";
+        } else {
+            IMCContent.innerHTML = IMCValue;
+        }
     } else {
         IMCContent.innerHTML = "";
     }
@@ -95,6 +102,8 @@ if (window.TESTING !== true) {
             imcImage.src = "./Asset/Obésité.png";
         } else if (imc >= 35) {
             imcImage.src = "./Asset/obésité_sévère.png";
+        } else {
+            imcImage.src = "./Asset/noweight.png";
         }
     }
     getImageImc();
@@ -227,7 +236,7 @@ if (window.TESTING !== true) {
     // console.log(validateName("Ok")); // Renvoie "Le nom doit avoir plus de 2 caractères."
 
 
-    
+
 
     // -------------Progress bar--------------------------
 

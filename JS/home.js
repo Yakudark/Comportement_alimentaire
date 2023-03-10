@@ -5,10 +5,18 @@ function rangeSlide1(value) {
     calculateImc();
 }
 
-function rangeSlide2(value) {
-    document.getElementById('secondRangeValue').innerHTML = value;
+const range1 = document.getElementById('range1');
+const range2 = document.getElementById('range2');
+
+range1.addEventListener('input', () => {
+    document.getElementById('rangeValue').innerHTML = range1.value;
     calculateImc();
-}
+});
+
+range2.addEventListener('input', () => {
+    document.getElementById('secondRangeValue').innerHTML = range2.value;
+    calculateImc();
+});
 
 
 function calculateImc() {

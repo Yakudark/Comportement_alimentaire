@@ -107,30 +107,29 @@ function updateSize()
 
 function calculateQuotKcal()
 {
-    // session_start();
-    if ($_SESSION['user_id']) {
+    if (isset($_SESSION['user_id']) && $_SESSION['user_id']) {
         $userInfo = getOneUser($_SESSION['user_id']);
-        // require './Vues/VueUser.php';
 
-        $weight = $userInfo['weight_user'];
-        $height = $userInfo['height'];
-        $sexe = $userInfo['sexe'];
-        $date_of_birth = $userInfo['date_of_birth'];
-        $date_actuelle = date("Y-m-d");
-        $age = date_diff(date_create($date_of_birth), date_create($date_actuelle));
-        $age_str = $age->format('%y'); // Formatte l'objet DateInterval en une chaîne de caractères
-        $kcalNecessary = 0;
+        if (isset($userInfo['weight_user']) && $userInfo['weight_user'] != null && isset($userInfo['height']) && $userInfo['height'] != null) {
+            $weight = $userInfo['weight_user'];
+            $height = $userInfo['height'];
+            $sexe = $userInfo['sexe'];
+            $date_of_birth = $userInfo['date_of_birth'];
+            $date_actuelle = date("Y-m-d");
+            $age = date_diff(date_create($date_of_birth), date_create($date_actuelle));
+            $age_str = $age->format('%y'); // Formatte l'objet DateInterval en une chaîne de caractères
+            $kcalNecessary = 0;
 
-        if ($sexe == "féminin") {
-            $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) + 5;
-            // echo $kcalNecessary;
-        } else if ($sexe == "masculin") {
-            $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) - 161;
-            // echo $kcalNecessary;
+            if ($sexe == "féminin") {
+                $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) + 5;
+                // echo $kcalNecessary;
+            } else if ($sexe == "masculin") {
+                $kcalNecessary = (10 * $weight) + (6.25 * $height) - (5 * $age_str) - 161;
+                // echo $kcalNecessary;
+            }
+            return $kcalNecessary;
         }
     }
-
-    return $kcalNecessary;
 }
 // Affiche une erreur
 function erreur($msgErreur)
