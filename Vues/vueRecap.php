@@ -58,7 +58,7 @@ ob_start();
         echo '<div class="st_wrap_table" data-table_id="0">';
         echo '<header class="st_table_header">';
         echo '<h2>Journée du ' . date('d/m/Y', strtotime("-$i day")) . '</h2>';
-        echo '<h3>Total de la journée : ' . $total_kcal_jour . ' kcal</h3>'; // Afficher le total de kcal de la journée
+        echo '<h3 id="total_kcal_jour">Total de la journée : ' . $total_kcal_jour . ' kcal</h3>'; // Afficher le total de kcal de la journée
         echo '<div class="st_row">';
         echo '<div class="st_column _name">Date</div>';
         echo '<div class="st_column _type">Type de plat</div>';
@@ -91,11 +91,15 @@ ob_start();
             echo '</div>';
         }
     } ?>
-
+                <!-- <h3 class="titleRecap"><span class="fancy">Récapitulatif</span> de la consommation des 10 derniers jours</h3>
+                <div class="chartHere">
+                        <canvas id="myChart">
+                        </canvas>
+                </div> -->
 
 
 </main>
-
+<script src="./JS/index.js"></script>
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require 'gabarit.php'; ?>

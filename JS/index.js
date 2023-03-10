@@ -182,15 +182,15 @@ if (window.TESTING !== true) {
 
     // Password
 
-    let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+    // let mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
 
-    if (!PWD_REGEX.test(createPw.value)) {
-        alert("Votre mot de passe n'est pas valide.")
-    };
+    // if (!PWD_REGEX.test(createPw.value)) {
+    //     alert("Votre mot de passe n'est pas valide.")
+    // };
 
-    if (!PWD_REGEX.test(pw.value)) {
-        alert("Votre mot de passe n'est pas valide.")
-    }
+    // if (!PWD_REGEX.test(pw.value)) {
+    //     alert("Votre mot de passe n'est pas valide.")
+    // }
 
     // Exemple d'utilisation pour les tests :
     // console.log(checkPassword("Abcd1234")); // Renvoie "Le mot de passe est valide."
@@ -290,7 +290,15 @@ function validateName(createName) {
     return true;
 }
 
-module.exports = { getIMC, kcalPerQuantity, ValidateEmail, validateName };
+// module.exports = { getIMC, kcalPerQuantity, ValidateEmail, validateName };
+
+
+
+/// Chart des 10 derniers jours ///
+
+// On récupère le total de calorie par jour dans vueRecap.php
+// let caloParJour = parseFloat(document.getElementById("total_kcal_jour").textContent);
+// console.log(caloParJour);
 
 
 // tableau des 10 jours en fonction de la date d'ajd
@@ -304,12 +312,10 @@ for (let i = 0; i <= 10; i++) {
 
     // fonction pour formater la date
     tab[i] = date.toLocaleDateString(); 
-    console.log(tab[i]);
 }
 
 // On récupère la calorie optimal à consommer par jour dans vueUser.php
 let moyenneCal = parseFloat(document.getElementById("kcalNecessary").textContent);
-
 
 
 function chart(){
@@ -322,7 +328,7 @@ function chart(){
         datasets: [
         {
           label: 'Calories consommées',
-          data: [0, 1700, 2000, 1400, 1233, 1800, 1600, 1500, 4000, 3000],
+          data: [4000, 1700, 2000, 1400, 1233, 1800, 1600, 1500, 4000, 3000],
           borderWidth: 2,
           borderColor: '#3FC068'
         },
@@ -334,14 +340,15 @@ function chart(){
         }]
     },
     options: {
-        responsive: true,
+
         scales: {
-          y: {
-            min: 0,
-            max: 6000,
-          }
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
         }
-      },
+    },
     })
     }
     chart();

@@ -580,3 +580,48 @@
     background: rgb(229, 26, 152);
     border: none !important;
 }
+/* ------------------Chart et title de chart--------------------------------- */
+.chartHere{
+    width: 80%;
+    margin: auto;
+
+}
+#myChart{
+    background-color: white;
+}
+.titleRecap{
+    margin: 3% auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .container_user{
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    .list{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .btn_height, .btn_recap, .btn_weight {
+        position: relative !important;
+        display: block !important;
+        bottom: 0px !important;
+        right: 0px !important;
+        width: 80%;
+        margin: 2%;
+    }
+    .btn_recap{
+        margin-bottom: 8% !important;
+    }
+    .container_btn{
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    }
+

@@ -53,21 +53,23 @@ $edit = false;
                 </div>
 
             </div>
-            <button class="btn_weight btn_user">
-                <a id="updateWeightLink">
-                    Modifier votre poids
-                </a>
-            </button>
-            <button class="btn_height btn_user">
-                <a id="updateSizeLink">
-                    Modifier votre taille
-                </a>
-            </button>
-            <button class="btn_recap btn_user">
-                <a href="index.php?action=VuesRecap" id="updateRecap">
-                    Voir mon récap
-                </a>
-            </button>
+            <div class="container_btn">
+                <button class="btn_weight btn_user">
+                    <a id="updateWeightLink">
+                        Modifier votre poids
+                    </a>
+                </button>
+                <button class="btn_height btn_user">
+                    <a id="updateSizeLink">
+                        Modifier votre taille
+                    </a>
+                </button>
+                <button class="btn_recap btn_user">
+                    <a href="index.php?action=VuesRecap" id="updateRecap">
+                        Voir mon récap
+                    </a>
+                </button>
+            </div>
         </div>
     </div>
 </div>
@@ -227,6 +229,13 @@ $edit = false;
                         <div class="st_column _type">Kcal total</div>
                     </div>
                 </div>
+
+                <h3 class="titleRecap"><span class="fancy">Récapitulatif</span> de la consommation des 10 derniers jours</h3>
+                        <div class="chartHere">
+                            <canvas id="myChart">
+                            </canvas>
+                        </div>
+
                 <div class="st_table">;
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -247,9 +256,8 @@ $edit = false;
                     </div>
         </form>
 
-
-
-        <script type="module" src="../JS/index.js"></script>
+        <script src="./JS/index.js"></script>
+        <script type="module" src="./JS/index.js"></script>
         <?php $contenu = ob_get_clean(); ?>
 
         <?php require 'gabarit.php'; ?>
