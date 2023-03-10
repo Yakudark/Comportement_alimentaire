@@ -1,6 +1,6 @@
 <?php $titre = "Mon récapitulatif";
 ob_start();
-
+require_once __DIR__ . '/../Controllers/controllers.php';
 ?>
 <h1>Bienvenue <?= $userInfo['firstname'] . " " . $userInfo['lastname']; ?></h1>
 <h2>Mon récapitulatif</h2>
@@ -19,8 +19,8 @@ ob_start();
         $date = date('Y-m-d', strtotime("-$i day")); // Formatage de la date pour la requête SQL
 
         // Requête pour récupérer les données de la table eaten_date pour le jour en cours de la boucle
-        $query = $db->prepare('SELECT id_food, date_of_eaten, quantity, typeOfMeal FROM eaten_date WHERE date_of_eaten = ? ');
-        $query->execute(array($date));
+        $query = $db->prepare('SELECT * FROM eaten_date WHERE date_of_eaten = ? AND id_user = ?');
+        $query->execute(array($date, $_SESSION['user_id']));
         // Requête pour récupérer le nom de l'aliment à partir de la table food
         $query_food = $db->prepare('SELECT name_food, kcal FROM food WHERE id = ?');
 

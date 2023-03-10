@@ -1,4 +1,10 @@
 // // ---------Calcul IMC balance Vue Accueil--------------//
+
+function rangeSlide1(value) {
+    document.getElementById('rangeValue').innerHTML = value;
+    calculateImc();
+}
+
 const range1 = document.getElementById('range1');
 const range2 = document.getElementById('range2');
 
@@ -11,6 +17,7 @@ range2.addEventListener('input', () => {
     document.getElementById('secondRangeValue').innerHTML = range2.value;
     calculateImc();
 });
+
 
 function calculateImc() {
     const weight = parseInt(document.getElementById('rangeValue').innerHTML);
